@@ -42,23 +42,28 @@ import Layout from "../layouts/Layout.astro";
 				<strong>Robot as a Service (RaaS)</strong>. Lidero la
 				convergencia entre la visión estratégica y la solidez técnica.
 			</div>
+			<div class="tech-ticker">
+				<div class="ticker-content">
+					<i class="devicon-python-plain"></i>
+					<i class="devicon-googlecloud-plain"></i>
+					<i class="devicon-uipath-plain"></i>
+					<i class="devicon-docker-plain"></i>
+					<i class="devicon-azuresqldatabase-plain"></i>
+					<i class="devicon-github-original"></i>
+					<i class="devicon-dot-net-plain"></i>
+					<i class="devicon-appian-plain"></i>
+					<i class="devicon-python-plain"></i>
+					<i class="devicon-googlecloud-plain"></i>
+					<i class="devicon-uipath-plain"></i>
+					<i class="devicon-docker-plain"></i>
+					<i class="devicon-azuresqldatabase-plain"></i>
+					<i class="devicon-github-original"></i>
+					<i class="devicon-dot-net-plain"></i>
+					<i class="devicon-appian-plain"></i>
+				</div>
+			</div>
 		</section>
-		<div class="tech-ticker">
-    <div class="ticker-content">
-        <i class="devicon-python-plain"></i>
-        <i class="devicon-googlecloud-plain"></i>
-        <i class="devicon-uipath-plain"></i>
-        <i class="devicon-docker-plain"></i>
-        <i class="devicon-azuresqldatabase-plain"></i>
-        <i class="devicon-github-original"></i>
-        <i class="devicon-dot-net-plain"></i>
-        <i class="devicon-appian-plain"></i>
-        <i class="devicon-python-plain"></i>
-        <i class="devicon-googlecloud-plain"></i>
-        <i class="devicon-uipath-plain"></i>
-        <i class="devicon-docker-plain"></i>
-    </div>
-</div>
+
 		<section id="expertise">
 			<h2>Stack Tecnológico y de Gestión</h2>
 			<div class="expertise-grid">
@@ -580,34 +585,45 @@ import Layout from "../layouts/Layout.astro";
 		}
 	}
 	.tech-ticker {
-    width: 100%;
-    overflow: hidden;
-    background: #1e1e1e;
-    padding: 1.5rem 0;
-    margin-top: 2rem;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
-    white-space: nowrap;
-}
+        width: 100%;
+        overflow: hidden; /* Esto evita que la página se ensanche */
+        background: #1e1e1e;
+        padding: 2rem 0;
+        margin-top: 2rem;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+        position: relative;
+    }
 
-.ticker-content {
-    display: inline-block;
-    animation: scroll 20s linear infinite;
-}
+    .ticker-content {
+        display: flex;
+        width: max-content; /* Permite que el contenido se extienda horizontalmente */
+        animation: scroll 30s linear infinite; /* Aumenté a 30s para más elegancia */
+    }
 
-.ticker-content i {
-    font-size: 2.5rem;
-    margin: 0 2rem;
-    color: #666;
-    transition: color 0.3s;
-}
+    .ticker-content i {
+        font-size: 2.5rem;
+        margin: 0 3rem;
+        color: #666;
+        flex-shrink: 0; /* Evita que los iconos se achiquen */
+    }
 
-.ticker-content i:hover {
-    color: #da62c4;
-}
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); } /* Mueve exactamente la mitad del contenido clonado */
+    }
 
-@keyframes scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-}
+    /* Fix para móviles: evita que el main se rompa */
+    main {
+        overflow-x: hidden;
+    }
+
+	@keyframes scroll {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
 </style>
