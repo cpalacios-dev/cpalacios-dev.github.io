@@ -9,12 +9,36 @@ import Layout from "../layouts/Layout.astro";
 			<p class="role">
 				Ingeniero de Portafolios TI | Desarrollador RPA & Cloud
 			</p>
+
+			<div class="social-links">
+				<a
+					href="https://linkedin.com/in/cpalaciosborquez"
+					target="_blank"
+					title="LinkedIn"
+				>
+					<i class="devicon-linkedin-plain"></i>
+				</a>
+				<a
+					href="https://github.com/cpalacios-dev"
+					target="_blank"
+					title="GitHub"
+				>
+					<i class="devicon-github-original"></i>
+				</a>
+				<a
+					href="mailto:cpalacios.borquez@gmail.com"
+					title="Enviar Email"
+				>
+					<i class="devicon-google-plain"></i>
+				</a>
+			</div>
+
 			<div class="description">
 				Especialista en modernización tecnológica mediante el diseño de
-				<strong>arquitecturas escalables en la nube (GCP)</strong> y la implementación
-				de modelos
-				<strong>Robot as a Service (RaaS)</strong>. Lidero la
-				convergencia entre la visión estratégica y la solidez técnica.
+				<strong>arquitecturas escalables en la nube (GCP)</strong> y la implementación de modelos
+				<strong>Robot as a Service (RaaS)</strong>[cite: 28]. Lidero la
+				convergencia entre la visión estratégica y la solidez
+				técnica.
 			</div>
 		</section>
 
@@ -179,7 +203,7 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 
 				<div class="cert-card">
-					<h4>Power Automate Desktop</h4>
+					<h4>Power Automate Desktop / Cloud</h4>
 					<p>Udemy | Curso Completo RPA</p>
 				</div>
 			</div>
@@ -489,4 +513,24 @@ import Layout from "../layouts/Layout.astro";
 		border: 1px solid #da62c4;
 		color: #da62c4;
 	}
+	.social-links {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .social-links a {
+        color: #a3a3a3;
+        font-size: 1.8rem;
+        transition: color 0.3s ease, transform 0.2s ease;
+        text-decoration: none;
+    }
+    .social-links a:hover {
+        color: #da62c4; /* El color de tu degradado */
+        transform: translateY(-3px);
+    }
+    /* Ajuste específico para el icono de LinkedIn si lo quieres azul original */
+    .social-links a:hover .devicon-linkedin-plain {
+        color: #0077b5;
+    }
 </style>
