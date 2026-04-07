@@ -13,11 +13,17 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # Soluciona el warning de depreciación
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Install, build, and upload site
         uses: withastro/action@v3
+        with:
+          # Esto asegura que GitHub use exactamente las mismas versiones que tú
+          node-version: 24 
 
   deploy:
     needs: build
