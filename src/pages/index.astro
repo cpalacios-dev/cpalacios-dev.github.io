@@ -9,10 +9,12 @@ import Layout from "../layouts/Layout.astro";
 			<p class="role">
 				Ingeniero de Portafolios TI | Desarrollador RPA & Cloud
 			</p>
-
+			<div class="status-badge">
+				<span class="dot"></span> Disponible para nuevos desafíos
+			</div>
 			<div class="social-links">
 				<a
-					href="https://linkedin.com/in/cpalaciosborquez"
+					href="https://www.linkedin.com/in/cpalacios-borquez/"
 					target="_blank"
 					title="LinkedIn"
 				>
@@ -35,13 +37,28 @@ import Layout from "../layouts/Layout.astro";
 
 			<div class="description">
 				Especialista en modernización tecnológica mediante el diseño de
-				<strong>arquitecturas escalables en la nube (GCP)</strong> y la implementación de modelos
-				<strong>Robot as a Service (RaaS)</strong>[cite: 28]. Lidero la
-				convergencia entre la visión estratégica y la solidez
-				técnica.
+				<strong>arquitecturas escalables en la nube (GCP)</strong> y la implementación
+				de modelos
+				<strong>Robot as a Service (RaaS)</strong>. Lidero la
+				convergencia entre la visión estratégica y la solidez técnica.
 			</div>
 		</section>
-
+		<div class="tech-ticker">
+    <div class="ticker-content">
+        <i class="devicon-python-plain"></i>
+        <i class="devicon-googlecloud-plain"></i>
+        <i class="devicon-uipath-plain"></i>
+        <i class="devicon-docker-plain"></i>
+        <i class="devicon-azuresqldatabase-plain"></i>
+        <i class="devicon-github-original"></i>
+        <i class="devicon-dot-net-plain"></i>
+        <i class="devicon-appian-plain"></i>
+        <i class="devicon-python-plain"></i>
+        <i class="devicon-googlecloud-plain"></i>
+        <i class="devicon-uipath-plain"></i>
+        <i class="devicon-docker-plain"></i>
+    </div>
+</div>
 		<section id="expertise">
 			<h2>Stack Tecnológico y de Gestión</h2>
 			<div class="expertise-grid">
@@ -251,7 +268,7 @@ import Layout from "../layouts/Layout.astro";
 				<a href="mailto:cpalacios.borquez@gmail.com" class="btn mail">
 					Enviar Email
 				</a>
-				<a href="/Cv_CPalacios_2026.pdf" download class="btn cv">
+				<a href="/cv_cpalacios.pdf" download class="btn cv">
 					Descargar CV (PDF)
 				</a>
 			</div>
@@ -514,23 +531,83 @@ import Layout from "../layouts/Layout.astro";
 		color: #da62c4;
 	}
 	.social-links {
-        display: flex;
-        gap: 1.5rem;
-        margin-top: 1rem;
-        margin-bottom: 1.5rem;
-    }
-    .social-links a {
-        color: #a3a3a3;
-        font-size: 1.8rem;
-        transition: color 0.3s ease, transform 0.2s ease;
-        text-decoration: none;
-    }
-    .social-links a:hover {
-        color: #da62c4; /* El color de tu degradado */
-        transform: translateY(-3px);
-    }
-    /* Ajuste específico para el icono de LinkedIn si lo quieres azul original */
-    .social-links a:hover .devicon-linkedin-plain {
-        color: #0077b5;
-    }
+		display: flex;
+		gap: 1.5rem;
+		margin-top: 1rem;
+		margin-bottom: 1.5rem;
+	}
+	.social-links a {
+		color: #a3a3a3;
+		font-size: 1.8rem;
+		transition:
+			color 0.3s ease,
+			transform 0.2s ease;
+		text-decoration: none;
+	}
+	.social-links a:hover {
+		color: #da62c4; /* El color de tu degradado */
+		transform: translateY(-3px);
+	}
+	/* Ajuste específico para el icono de LinkedIn si lo quieres azul original */
+	.social-links a:hover .devicon-linkedin-plain {
+		color: #0077b5;
+	}
+	.status-badge {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 0.85rem;
+		color: #4ade80; /* Verde neón sutil */
+		margin-top: 0.5rem;
+	}
+	.dot {
+		width: 8px;
+		height: 8px;
+		background-color: #4ade80;
+		border-radius: 50%;
+		box-shadow: 0 0 8px #4ade80;
+		animation: pulse 2s infinite;
+	}
+	@keyframes pulse {
+		0% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.4;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	.tech-ticker {
+    width: 100%;
+    overflow: hidden;
+    background: #1e1e1e;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    white-space: nowrap;
+}
+
+.ticker-content {
+    display: inline-block;
+    animation: scroll 20s linear infinite;
+}
+
+.ticker-content i {
+    font-size: 2.5rem;
+    margin: 0 2rem;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.ticker-content i:hover {
+    color: #da62c4;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
 </style>

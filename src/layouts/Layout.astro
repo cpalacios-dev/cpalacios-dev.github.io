@@ -17,27 +17,24 @@ const {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
         <meta name="generator" content={Astro.generator} />
-        <meta name="description" content={description} />
+        
         <title>{title}</title>
+        <meta name="description" content={description} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://cpalacios-dev.github.io/" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://cpalacios-dev.github.io/preview-portafolio.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content="https://cpalacios-dev.github.io/preview-portafolio.png" />
     </head>
     <body>
         <slot />
     </body>
 </html>
-
-<style is:global>
-    :root {
-        --accent-gradient: linear-gradient(45deg, #4f39fa, #da62c4);
-    }
-    html {
-        font-family: 'Inter', system-ui, sans-serif;
-        background: #13151a;
-        color-scheme: dark;
-    }
-    body {
-        margin: 0;
-        min-height: 100vh;
-    }
-</style>
