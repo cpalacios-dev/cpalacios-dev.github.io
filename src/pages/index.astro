@@ -18,6 +18,77 @@ const techStack = [
     { type: "devicon", icon: "devicon-dot-net-plain colored" }
 ];
 
+const certificaciones = [
+    {
+        tipoTarjeta: "gold",
+        tipoIcono: "fa",
+        icono: "fa-solid fa-award",
+        estiloIcono: "font-size: 1.8rem; color: #BC52EE;",
+        badge: "Oficial / Verificada",
+        titulo: "Ingeniero de Portafolios",
+        url: "https://www.credential.net/f65c814b-6e87-4616-bebd-be26140cb679",
+        descripcion: "Tecnológico de Monterrey | 85 Hrs"
+    },
+    {
+        tipoTarjeta: "gold",
+        tipoIcono: "img",
+        icono: "/icons/blueprism.svg",
+        claseImagen: "local-icon-bp",
+        badge: "Oficial / Verificada",
+        titulo: "Blue Prism Certified Developer",
+        url: "https://www.credly.com/earner/earned/badge/d23392fe-8ee6-4604-a9a4-90434722d933",
+        descripcion: "SS&C Blue Prism | Certificación de Arquitectura RPA"
+    },
+    {
+        tipoTarjeta: "academy",
+        tipoIcono: "img",
+        icono: "/icons/appian.svg",
+        claseImagen: "local-icon-appian",
+        badge: "Academy 2026",
+        titulo: "Appian Developer",
+        url: null, // No tiene URL
+        descripcion: "Appian Academy | Low-Code Automation"
+    },
+    {
+        tipoTarjeta: "academy",
+        tipoIcono: "img",
+        icono: "/icons/uipath.svg",
+        claseImagen: "",
+        badge: "Academy",
+        titulo: "RPA Developer Foundation",
+        url: null,
+        descripcion: "UiPath Academy | EY Consulting"
+    },
+    {
+        tipoTarjeta: "tech",
+        tipoIcono: "devicon",
+        icono: "devicon-python-plain colored",
+        badge: "Curso",
+        titulo: "Análisis de Datos con Python",
+        url: null,
+        descripcion: "Desafío Latam | Oct 2025"
+    },
+    {
+        tipoTarjeta: "tech",
+        tipoIcono: "devicon",
+        icono: "devicon-redhat-plain colored",
+        badge: "Especialización",
+        titulo: "Red Hat OpenShift Training",
+        url: null,
+        descripcion: "Red Hat | Contenedores y Kubernetes"
+    },
+    {
+        tipoTarjeta: "tech",
+        tipoIcono: "img",
+        icono: "/icons/pa.svg",
+        claseImagen: "",
+        badge: "Formación",
+        titulo: "Power Automate Desktop / Cloud",
+        url: null,
+        descripcion: "Udemy | Curso Completo RPA"
+    }
+];
+
 // Definimos los repositorios en un arreglo
 const repositorios = [
     {
@@ -204,64 +275,40 @@ const repositorios = [
 		</section>
 
 		<section id="certificaciones">
-			<h2>Certificaciones y Especialización</h2>
-			<div class="cert-grid">
-				<div class="cert-card gold">
-					<div class="cert-header">
-						<img src="/icons/blueprism.svg" class="local-icon-bp" alt="Blue Prism" />
-						<span>Oficial</span>
-					</div>
-					<h4>Blue Prism Certified Developer</h4>
-					<p>SS&C Blue Prism | 2020</p>
-				</div>
+    <h2>Certificaciones y Especialización</h2>
+    <div class="cert-grid">
+        {certificaciones.map((cert) => (
+            <div class={`cert-card ${cert.tipoTarjeta}`}>
+                <div class="cert-header">
+                    {/* Renderizado condicional del icono según el tipo */}
+                    {cert.tipoIcono === "img" ? (
+                        <img src={cert.icono} class={cert.claseImagen} alt={cert.titulo} />
+                    ) : cert.tipoIcono === "fa" ? (
+                        <i class={cert.icono} style={cert.estiloIcono}></i>
+                    ) : (
+                        <i class={cert.icono}></i>
+                    )}
+                    <span>{cert.badge}</span>
+                </div>
+                
+                {/* Si tiene URL, dibuja el enlace con el iconito. Si no, solo dibuja el texto */}
+                {cert.url ? (
+                    <h4 style="display: flex; align-items: center; gap: 6px;">
+                        <a href={cert.url} target="_blank" style="color: inherit; text-decoration: none;" title="Ver credencial oficial">
+                            {cert.titulo}
+                            <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: #BC52EE;"></i>
+                        </a>
+                    </h4>
+                ) : (
+                    <h4>{cert.titulo}</h4>
+                )}
+                
+                <p>{cert.descripcion}</p>
+            </div>
+        ))}
+    </div>
+</section>
 
-				<div class="cert-card academy">
-					<div class="cert-header">
-						<img src="/icons/appian.svg" class="local-icon-appian" alt="Appian" />
-						<span>Academy 2026</span>
-					</div>
-					<h4>Appian Developer</h4>
-					<p>Appian Academy | Low-Code Automation</p>
-				</div>
-
-				<div class="cert-card academy">
-					<div class="cert-header">
-						<img src="/icons/uipath.svg" class="" alt="uipath" />
-						<span>Academy</span>
-					</div>
-					<h4>RPA Developer Foundation</h4>
-					<p>UiPath Academy | EY Consulting</p>
-				</div>
-
-				<div class="cert-card tech">
-					<div class="cert-header">
-						<i class="devicon-python-plain colored"></i>
-						<span>Curso</span>
-					</div>
-					<h4>Análisis de Datos con Python</h4>
-					<p>Desafío Latam | Oct 2025</p>
-					
-				</div>
-
-				<div class="cert-card tech">
-					<div class="cert-header">
-						<i class="devicon-redhat-plain colored"></i>
-						<span>Especialización</span>
-					</div>
-					<h4>Red Hat OpenShift Training</h4>
-					<p>Red Hat | Contenedores y Kubernetes</p>
-				</div>
-
-				<div class="cert-card tech">
-					<div class="cert-header">
-						<img src="/icons/pa.svg" class="" alt="Power Automate" />
-						<span>Formación</span>
-					</div>
-					<h4>Power Automate Desktop / Cloud</h4>
-					<p>Udemy | Curso Completo RPA</p>
-				</div>
-			</div>
-		</section>
 		<section id="trayectoria">
             <h2>Trayectoria y Formación</h2>
             <div class="timeline">
@@ -269,43 +316,94 @@ const repositorios = [
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <span class="year">2025 - 2026</span>
-                        <h4>Ingeniero de Portafolios TI & Desarrollador RPA</h4>
+                        <h4>Desarrollador RPA, Backend & GenAI</h4>
                         <span class="company">SURA AFP Capital (Kibernum)</span>
                         <p>
-                            Desarrollo de arquitectura RaaS y microservicios transaccionales. Orquestación de procesos críticos utilizando <strong>Python, Playwright</strong> y plataformas automatizadas (UiPath, Appian), logrando eficiencia operativa a gran escala.
+                            Liderazgo técnico en la modernización de procesos corporativos críticos. Desarrollo de arquitecturas escalables y orquestación de datos bajo estrictos estándares de confidencialidad corporativa:
                         </p>
+                        <ul style="color: #a3a3a3; font-size: 0.95rem; line-height: 1.6; padding-left: 1.2rem; margin-top: 0.8rem;">
+                            <li style="margin-bottom: 0.5rem;"><strong>Arquitectura RaaS y Cloud:</strong> Diseño y despliegue de microservicios transaccionales (Robot as a Service) con Python y Playwright sobre infraestructura serverless en Google Cloud (GCP - Cloud Run).</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>IA Generativa (GenAI):</strong> Integración de modelos cognitivos (OCR/NLP) y LLMs de última generación (Gemini 3 Flash) para el procesamiento inteligente de documentos (IDP) y extracción de datos no estructurados.</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>Automatización Previsional:</strong> Desarrollo de soluciones RaaS para la gestión automatizada de nóminas y beneficios, interactuando con plataformas gubernamentales de alta concurrencia.</li>
+                            <li><strong>Orquestación de Datos:</strong> Diseño de flujos complejos (Appian, n8n) para sincronizar información desde plataformas de gestión legal directamente hacia SAP SuccessFactors.</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <span class="year">2023 - 2025</span>
-                        <h4>Líder de Proyectos de Integración & RPA</h4>
-                        <span class="company">Claro Chile / Consultoría (EY)</span>
+                        <h4>Desarrollador TI RPA Senior</h4>
+                        <span class="company">Claro Chile S.A.</span>
                         <p>
-                            Liderazgo en la modernización tecnológica e integración de sistemas legacy mediante APIs REST/SOAP. Automatización de procesos core para telecomunicaciones y el <strong>sector bancario (Scotiabank, Itaú, Santander)</strong>.
+                            Liderazgo técnico en el diseño e implementación de automatizaciones avanzadas. Supervisión de integraciones de sistemas complejos (APIs REST/SOAP) entre plataformas legacy y nuevas herramientas digitales. Coordinación técnica bajo estándares ITIL y metodologías ágiles, integrando motores cognitivos (OCR/NLP).
                         </p>
                     </div>
                 </div>
 
-                <div class="timeline-item">
+               <div class="timeline-item">
                     <div class="timeline-content">
-                        <span class="year">2024</span>
-                        <h4>Posgrado en Gestión de Portafolios</h4>
+                        <span class="year">Jul 2024 - Nov 2024</span>
+                        <h4 style="display: flex; align-items: center; gap: 8px;">
+                            <a href="https://www.credential.net/f65c814b-6e87-4616-bebd-be26140cb679" target="_blank" style="color: inherit; text-decoration: none;" title="Ver credencial oficial">
+                                Ingeniero de Portafolios
+                                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: #BC52EE;"></i>
+                            </a>
+                        </h4>
                         <span class="company">Tecnológico de Monterrey</span>
                         <p>
-                            Especialización estratégica en <strong>Value Driven Delivery (VDD)</strong>, marcos ágiles (Scrum) y PMBOK. Enfoque en vincular la ejecución tecnológica con los objetivos y el ROI del negocio.
+                            Certificación de competencias (85 horas). Especialización estratégica en <strong>Value Driven Delivery (VDD)</strong>, marcos ágiles y PMBOK. Enfoque en vincular la ejecución tecnológica y la automatización con los objetivos corporativos y el ROI del negocio.
                         </p>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <span class="year">2020</span>
+                        <span class="year">2022 - 2023</span>
+                        <h4>Desarrollador TI RPA / Analista de Procesos</h4>
+                        <span class="company">ECRGROUP® Chile</span>
+                        <p>
+                            Gestión de requerimientos e integración de datos entre plataformas heterogéneas mediante APIs REST y scripts en Python. Optimización de la eficiencia administrativa implementando soluciones RPA con UiPath y Power Automate (Cloud y Desktop).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="year">2021 - 2022</span>
+                        <h4>Desarrollador TI RPA / Analista Funcional</h4>
+                        <span class="company">Grupo STT Chile</span>
+                        <p>
+                            Diseño y desarrollo de automatizaciones (UiPath / Power Automate).
+							Documentación técnica y funcional para transformación digital (Mapas AS-IS / TO-BE).
+							Implementación de inteligencia artificial (OCR y NLP) para procesar información no estructurada.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="year">2015 - 2020</span>
                         <h4>Ingeniería en Informática</h4>
                         <span class="company">IPCHILE</span>
                         <p>
-                            Titulación profesional con enfoque en desarrollo de software, despliegue de bases de datos y fundamentos sólidos de arquitectura de sistemas.
+                            Titulación profesional con enfoque en desarrollo de software,
+							bases de datos y fundamentos sólidos de arquitectura de sistemas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="year">2019 - 2020</span>
+                        <h4>Consultor de Tecnología & Configurador RPA</h4>
+                        <span class="company">EY (Ernst & Young)</span>
+                        <p>
+                            Consultoría tecnológica y desarrollo de automatizaciones para instituciones financieras de primer nivel
+							 <strong>(Scotiabank, Banco Itaú y Banco Santander)</strong>. 
+							 Configuración y programación de robots utilizando <strong>Blue Prism</strong> y 
+							 <strong>UiPath</strong> para procesos bancarios críticos, garantizando el cumplimiento de SLAs, 
+							 la continuidad operativa y estrictos estándares de servicio y seguridad.
                         </p>
                     </div>
                 </div>
