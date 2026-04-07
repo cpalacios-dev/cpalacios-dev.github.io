@@ -45,27 +45,52 @@ import Layout from "../layouts/Layout.astro";
 			<div class="tech-ticker">
 				<div class="ticker-content">
 					<i class="devicon-python-plain"></i>
-					<i class="devicon-playwright-plain"></i>
-					<i class="devicon-robot-plain"></i>
-					<i class="devicon-vscode-plain"></i>
 					<i class="devicon-googlecloud-plain"></i>
 					<i class="devicon-docker-plain"></i>
-					<i class="devicon-azuresqldatabase-plain"></i>
-					<i class="devicon-azure-plain"></i>
-					<i class="devicon-github-original"></i>
-					<i class="devicon-git-plain"></i>
-					<i class="devicon-dot-net-plain"></i>
+					<i class="devicon-playwright-plain"></i>
 
-					<i class="devicon-python-plain"></i>
-					<i class="devicon-playwright-plain"></i>
-					<i class="devicon-robot-plain"></i>
-					<i class="devicon-vscode-plain"></i>
-					<i class="devicon-googlecloud-plain"></i>
-					<i class="devicon-docker-plain"></i>
+					<svg
+						class="custom-icon"
+						viewBox="0 0 24 24"
+						fill="currentColor"
+					>
+						<path
+							d="M12.522 17.153h-1.045v-4.108c0-1.228-.686-1.921-1.844-1.921-1.12 0-1.821.693-1.821 1.921v4.108H6.767v-6.398h1.045v.859c.403-.642 1.03-.986 1.918-.986 1.701 0 2.792 1.052 2.792 2.822v3.703zm6.278-3.576c0 2.21-1.687 3.702-3.896 3.702-2.217 0-3.881-1.492-3.881-3.702 0-2.201 1.664-3.687 3.881-3.687 2.21 0 3.896 1.486 3.896 3.687zm-1.09 0c0-1.635-1.187-2.731-2.806-2.731-1.627 0-2.8 1.096-2.8 2.731 0 1.642 1.173 2.747 2.8 2.747 1.62 0 2.806-1.105 2.806-2.747zM5.2 6.847V17.153H4.155V6.847H5.2zM15.433 6.847v1.896h-1.612v1.545h1.612v4.202c0 1.747.933 2.664 2.664 2.664h.702v-.896h-.567c-1.142 0-1.754-.567-1.754-1.768V10.288h2.321V8.743h-2.321V6.847h-1.045z"
+						></path>
+					</svg>
+
+					<svg
+						class="custom-icon"
+						viewBox="0 0 24 24"
+						fill="currentColor"
+					>
+						<path
+							d="M12 0L2.4 5.4v13.2L12 24l9.6-5.4V5.4L12 0zm7.2 17.4l-7.2 4.05-7.2-4.05V6.6L12 2.55l7.2 4.05v10.8zM12 7.2L8.4 9.15v5.7l3.6 1.95 3.6-1.95v-5.7L12 7.2z"
+						></path>
+					</svg>
+
+					<svg
+						class="custom-icon"
+						viewBox="0 0 24 24"
+						fill="currentColor"
+					>
+						<path
+							d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5-10-5-10 5z"
+						></path>
+					</svg>
+
+					<svg
+						class="custom-icon"
+						viewBox="0 0 24 24"
+						fill="currentColor"
+					>
+						<path
+							d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"
+						></path>
+					</svg>
+
 					<i class="devicon-azuresqldatabase-plain"></i>
-					<i class="devicon-azure-plain"></i>
 					<i class="devicon-github-original"></i>
-					<i class="devicon-git-plain"></i>
 					<i class="devicon-dot-net-plain"></i>
 				</div>
 			</div>
@@ -606,4 +631,19 @@ import Layout from "../layouts/Layout.astro";
 			opacity: 0.4;
 		}
 	}
+	/* Estilo para los SVG manuales en el ticker */
+    .custom-icon {
+        width: 2.2rem; /* Mismo tamaño que los i de Devicon */
+        height: 2.2rem;
+        margin: 0 2rem;
+        color: #666;
+        flex-shrink: 0;
+        transition: color 0.3s ease;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .custom-icon:hover {
+        color: #da62c4; /* El color fucsia de tu marca */
+    }
 </style>
