@@ -1,11 +1,72 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Cristian Palacios | Portfolio Engineer & RPA Developer">
+	<main>
+		<section id="hero">
+			<h1>Cristian Palacios</h1>
+			<p class="role">Portfolio Engineer & RPA Developer</p>
+			<div class="description">
+				Especialista en automatización de procesos (UiPath, Python, Playwright) 
+				con enfoque en <strong>Value Driven Delivery (VDD)</strong>.
+			</div>
+		</section>
+
+		<section id="expertise">
+			<h2>Expertise Técnica</h2>
+			<ul>
+				<li><strong>Automatización:</strong> UiPath, Power Automate, Playwright.</li>
+				<li><strong>Desarrollo:</strong> Python, APIs, SQL.</li>
+				<li><strong>Estrategia:</strong> Priorización MoSCoW, RICE, WSJF.</li>
+			</ul>
+		</section>
+	</main>
 </Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 2rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: #ffffff;
+		line-height: 1.6;
+		font-family: 'Inter', sans-serif;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin-bottom: 0;
+		background: linear-gradient(45deg, #4f39fa, #da62c4);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.role {
+		font-size: 1.5rem;
+		color: #a3a3a3;
+		margin-top: 0.5rem;
+	}
+	section {
+		margin-top: 4rem;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	li {
+		margin-bottom: 1rem;
+		padding: 1.5rem;
+		background: #1e1e1e;
+		border-radius: 12px;
+		border: 1px solid #333;
+		transition: border-color 0.3s ease, transform 0.2s ease;
+	}
+	li:hover {
+		border-color: #4f39fa; /* Color acorde al degradado del nombre */
+		transform: translateY(-2px);
+	}
+	strong {
+		color: #da62c4; /* Resalta los conceptos clave (VDD, SQL, etc) */
+	}
+</style>
