@@ -15,18 +15,23 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 
-		<section id="expertise">
-			<h2>Expertise Técnica</h2>
-			<ul>
-				<li>
-					<strong>Automatización:</strong> UiPath, Power Automate, Playwright.
-				</li>
-				<li><strong>Desarrollo:</strong> Python, APIs, SQL.</li>
-				<li>
-					<strong>Estrategia:</strong> Priorización MoSCoW, RICE, WSJF.
-				</li>
-			</ul>
-		</section>
+	<section id="expertise">
+    <h2>Expertise Técnica</h2>
+    <div class="expertise-grid">
+        <div class="skill-item">
+            <i class="devicon-python-plain colored"></i>
+            <span><strong>Python & Playwright:</strong> Automatización robusta y escalable.</span>
+        </div>
+        <div class="skill-item">
+            <i class="devicon-azuresqldatabase-plain colored"></i>
+            <span><strong>SQL & APIs:</strong> Integración de datos y microservicios.</span>
+        </div>
+        <div class="skill-item">
+            <i class="devicon-dot-net-plain colored"></i>
+            <span><strong>RPA Ecosystem:</strong> UiPath, Power Automate, Blue Prism.</span>
+        </div>
+    </div>
+</section>
 		<section id="proyectos">
 			<h2>Proyectos e Impacto</h2>
 			<div class="project-grid">
@@ -86,6 +91,38 @@ import Layout from "../layouts/Layout.astro";
 				</article>
 			</div>
 		</section>
+		<section id="vdd-strategy">
+    <h2>Estrategia VDD (Value Driven Delivery)</h2>
+    <p>Priorización de backlog basada en modelos matemáticos de eficiencia:</p>
+    <div class="vdd-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Aplicación</th>
+                    <th>Meta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>WSJF</strong></td>
+                    <td>Costo del retraso</td>
+                    <td>Agilidad Financiera</td>
+                </tr>
+                <tr>
+                    <td><strong>RICE / ICE</strong></td>
+                    <td>Impacto vs Esfuerzo</td>
+                    <td>ROI de Automatización</td>
+                </tr>
+                <tr>
+                    <td><strong>MoSCoW</strong></td>
+                    <td>Clasificación Crítica</td>
+                    <td>Cumplimiento de Plazos</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
 	</main>
 </Layout>
 
@@ -191,5 +228,39 @@ import Layout from "../layouts/Layout.astro";
     .project-card:hover {
         transform: scale(1.02);
         border-color: #4f39fa;
+    }
+	.expertise-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .skill-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background: #1e1e1e;
+        padding: 1rem;
+        border-radius: 10px;
+        border: 1px solid #333;
+    }
+    .skill-item i {
+        font-size: 2rem;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+        background: #1e1e1e;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #333;
+    }
+    th {
+        background-color: #252525;
+        color: #da62c4;
     }
 </style>
