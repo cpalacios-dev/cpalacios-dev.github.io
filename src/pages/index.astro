@@ -48,10 +48,10 @@ import Layout from "../layouts/Layout.astro";
 					<i class="devicon-googlecloud-plain"></i>
 					<i class="devicon-docker-plain"></i>
 
-					<img src="/icons/uipath.svg" class="local-icon icon-uipath" alt="UiPath" />
-       				<img src="/icons/appian.svg" class="local-icon icon-appian" alt="Appian" />
-        			<img src="/icons/blueprism.svg" class="local-icon icon-blueprism" alt="Blue Prism" />
-        			<img src="/icons/n8n.svg" class="local-icon icon-n8n" alt="n8n" />
+					<div class="local-icon icon-uipath" title="UiPath"></div>
+        			<div class="local-icon icon-appian" title="Appian"></div>
+        			<div class="local-icon icon-blueprism" title="Blue Prism"></div>
+        			<div class="local-icon icon-n8n" title="n8n"></div>
 
 					<i class="devicon-playwright-plain"></i>
 					<i class="devicon-azuresqldatabase-plain"></i>
@@ -401,10 +401,14 @@ import Layout from "../layouts/Layout.astro";
         height: 2.8rem;
     }
 	/* Estilo base para tus SVGs locales */
+    /* Estilo base para las siluetas de los logos */
     .local-icon {
         margin: 0 2.5rem;
         background-color: #666; /* Color gris inicial */
-        /* Esta es la magia: usamos el SVG como máscara */
+        display: inline-block;
+        flex-shrink: 0;
+        
+        /* Configuración de Máscara */
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         -webkit-mask-size: contain;
@@ -413,20 +417,40 @@ import Layout from "../layouts/Layout.astro";
         mask-position: center;
         
         transition: background-color 0.3s ease, transform 0.2s ease;
-        flex-shrink: 0;
     }
 
-    /* Asignamos cada archivo a su máscara */
-    .icon-uipath { -webkit-mask-image: url('/icons/uipath.svg'); mask-image: url('/icons/uipath.svg'); width: 2.8rem; height: 2.8rem; }
-    .icon-appian { -webkit-mask-image: url('/icons/appian.svg'); mask-image: url('/icons/appian.svg'); width: 3.5rem; height: 3.5rem; }
-    .icon-blueprism { -webkit-mask-image: url('/icons/blueprism.svg'); mask-image: url('/icons/blueprism.svg'); width: 4rem; height: 4rem; }
-    .icon-n8n { -webkit-mask-image: url('/icons/n8n.svg'); mask-image: url('/icons/n8n.svg'); width: 2.8rem; height: 2.8rem; }
-
-    /* EFECTO HOVER: Aquí cambiamos el fondo de la máscara al color rosa */
+    /* EFECTO HOVER: Pintamos la silueta de ROSA */
     .local-icon:hover {
-        background-color: #da62c4 !important; /* El rosa de tu marca */
+        background-color: #da62c4 !important;
         transform: scale(1.1);
     }
+
+    /* ASIGNACIÓN DE ARCHIVOS Y TAMAÑOS (Nivelación Visual) */
+    
+    .icon-uipath { 
+        -webkit-mask-image: url('/icons/uipath.svg'); 
+        mask-image: url('/icons/uipath.svg'); 
+        width: 3rem; height: 3rem; 
+    }
+    
+    .icon-appian { 
+        -webkit-mask-image: url('/icons/appian.svg'); 
+        mask-image: url('/icons/appian.svg'); 
+        width: 4.5rem; height: 3rem; /* Más ancho para que se lea */
+    }
+    
+    .icon-blueprism { 
+        -webkit-mask-image: url('/icons/blueprism.svg'); 
+        mask-image: url('/icons/blueprism.svg'); 
+        width: 5.5rem; height: 3rem; /* Mucho más ancho porque es horizontal */
+    }
+    
+    .icon-n8n { 
+        -webkit-mask-image: url('/icons/n8n.svg'); 
+        mask-image: url('/icons/n8n.svg'); 
+        width: 3rem; height: 3rem; 
+    }
+
     @keyframes scroll {
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
