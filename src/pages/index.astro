@@ -175,4 +175,21 @@ import Layout from "../layouts/Layout.astro";
 		border-radius: 20px;
 		color: #a3a3a3;
 	}
+	.project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .project-card {
+        padding: 1.5rem;
+        background: #1e1e1e;
+        border: 1px solid #333;
+        border-radius: 12px;
+        transition: transform 0.2s ease;
+    }
+    .project-card:hover {
+        transform: scale(1.02);
+        border-color: #4f39fa;
+    }
 </style>
