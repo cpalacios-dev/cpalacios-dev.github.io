@@ -21,6 +21,43 @@ import Layout from '../layouts/Layout.astro';
 				<li><strong>Estrategia:</strong> Priorización MoSCoW, RICE, WSJF.</li>
 			</ul>
 		</section>
+		<section id="proyectos">
+    <h2>Proyectos e Impacto</h2>
+    <div class="project-grid">
+        <article class="project-card">
+            <header>
+                <span class="company">SURA AFP CAPITAL</span>
+                <h3>Orquestación RPA End-to-End</h3>
+            </header>
+            <p>Desarrollo de bots complejos integrando <strong>Appian</strong>, <strong>UiPath</strong> y <strong>Python (Playwright)</strong> para la automatización de procesos críticos.</p>
+            <div class="tags">
+                <span>Playwright</span><span>UiPath</span><span>Appian</span>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <header>
+                <span class="company">Sector Banca (EY / Scotiabank / Itaú)</span>
+                <h3>Automatización Financiera</h3>
+            </header>
+            <p>Implementación de soluciones RPA para procesos bancarios masivos, asegurando integridad de datos y cumplimiento normativo.</p>
+            <div class="tags">
+                <span>Blue Prism</span><span>SQL</span><span>API Integration</span>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <header>
+                <span class="company">Metodología VDD</span>
+                <h3>Gestión de Portfolio Estratégico</h3>
+            </header>
+            <p>Priorización de backlog técnico utilizando modelos <strong>WSJF</strong> y <strong>RICE</strong> para maximizar el ROI de las automatizaciones.</p>
+            <div class="tags">
+                <span>Agile</span><span>VDD</span><span>Priorización</span>
+            </div>
+        </article>
+    </div>
+</section>
 	</main>
 </Layout>
 
@@ -69,4 +106,43 @@ import Layout from '../layouts/Layout.astro';
 	strong {
 		color: #da62c4; /* Resalta los conceptos clave (VDD, SQL, etc) */
 	}
+	.project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .project-card {
+        padding: 1.5rem;
+        background: #1e1e1e;
+        border: 1px solid #333;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .company {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #da62c4;
+        font-weight: bold;
+    }
+    h3 {
+        margin: 0.5rem 0 1rem 0;
+        color: #fff;
+    }
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    .tags span {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+        background: #333;
+        border-radius: 20px;
+        color: #a3a3a3;
+    }
 </style>
