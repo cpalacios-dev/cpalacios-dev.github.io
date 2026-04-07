@@ -47,54 +47,16 @@ import Layout from "../layouts/Layout.astro";
 					<i class="devicon-python-plain"></i>
 					<i class="devicon-googlecloud-plain"></i>
 					<i class="devicon-docker-plain"></i>
+
+					<img src="/icons/uipath.svg" class="local-icon" alt="UiPath" />
+       			    <img src="/icons/appian.svg" class="local-icon" alt="Appian" />
+        			<img src="/icons/Blue_Prism_Logo.svg" class="local-icon" alt="Blue Prism" />
+        			<img src="/icons/n8n.svg" class="local-icon" alt="n8n" />
+
 					<i class="devicon-playwright-plain"></i>
-
-					<svg
-						class="custom-icon"
-						viewBox="0 0 24 24"
-						fill="currentColor"
-					>
-						<path
-							d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm1.06 13.06l-1.06-1.06-1.06 1.06a1.5 1.5 0 11-2.122-2.122l1.06-1.06-1.06-1.06a1.5 1.5 0 112.122-2.122l1.06 1.06 1.06-1.06a1.5 1.5 0 112.122 2.122l-1.06 1.06 1.06 1.06a1.5 1.5 0 11-2.122 2.122z"
-						></path>
-					</svg>
-
-					<svg
-						class="custom-icon"
-						viewBox="0 0 48 48"
-						fill="currentColor"
-					>
-						<path
-							d="M12.97,15.288v10.908c0,4.99,2.736,7.906,7.366,7.906s7.51-2.974,7.51-7.906V15.288h-3.73v10.908c0,2.822-1.202,4.385-3.694,4.385s-3.73-1.656-3.73-4.385V15.288h-3.73H12.97z M32.654,17.513c1.325,0,2.282-0.9,2.282-2.225c0-1.325-0.965-2.282-2.282-2.282c-1.318,0-2.282,0.929-2.282,2.282C30.372,16.642,31.337,17.513,32.654,17.513z M30.79,19.284v14.638h3.73V19.284H30.79z"
-						></path>
-					</svg>
-
-					<svg
-						class="custom-icon"
-						viewBox="0 0 24 24"
-						fill="currentColor"
-					>
-						<path
-							d="M12 0L2.4 5.4v13.2L12 24l9.6-5.4V5.4L12 0zm7.2 17.4l-7.2 4.05-7.2-4.05V6.6L12 2.55l7.2 4.05v10.8z"
-						></path>
-					</svg>
-
-					<svg
-						class="custom-icon"
-						viewBox="0 0 24 24"
-						fill="currentColor"
-					>
-						<path
-							d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5-10-5-10 5z"
-						></path>
-					</svg>
-
 					<i class="devicon-azuresqldatabase-plain"></i>
 					<i class="devicon-github-original"></i>
-
-					<i class="devicon-python-plain"></i>
-					<i class="devicon-googlecloud-plain"></i>
-					<i class="devicon-docker-plain"></i>
+					<i class="devicon-dot-net-plain"></i>
 				</div>
 			</div>
 		</section>
@@ -366,7 +328,7 @@ import Layout from "../layouts/Layout.astro";
 		outline: none;
 	}
 
-	/* 4. Ticker de Tecnologías (Contenido al ancho del main) */
+	/* 4. Ticker de Tecnologías (Híbrido: Devicon + Locales) */
 	.tech-ticker {
 		width: 100%;
 		overflow: hidden;
@@ -376,17 +338,45 @@ import Layout from "../layouts/Layout.astro";
 		border-radius: 12px;
 		border: 1px solid #333;
 	}
+
 	.ticker-content {
 		display: flex;
+		align-items: center; /* Alinea verticalmente iconos y SVGs */
 		width: max-content;
-		animation: scroll 30s linear infinite;
+		animation: scroll 35s linear infinite;
 	}
+
+	/* Estilo para iconos de librería i */
 	.ticker-content i {
 		font-size: 2.2rem;
-		margin: 0 2rem;
+		margin: 0 2.5rem;
 		color: #666;
 		flex-shrink: 0;
+		transition:
+			color 0.3s ease,
+			transform 0.2s ease;
 	}
+	.ticker-content i:hover {
+		color: #da62c4;
+		transform: scale(1.1);
+	}
+
+	/* Estilo para tus SVGs locales (uipath, appian, etc) */
+	.local-icon {
+		width: 2.2rem;
+		height: auto;
+		margin: 0 2.5rem;
+		filter: grayscale(100%) opacity(0.6); /* Los hace grises y sutiles */
+		transition:
+			filter 0.3s ease,
+			transform 0.2s ease;
+		flex-shrink: 0;
+	}
+	.local-icon:hover {
+		filter: grayscale(0%) opacity(1); /* Recuperan color al pasar el mouse */
+		transform: scale(1.1);
+	}
+
 	@keyframes scroll {
 		0% {
 			transform: translateX(0);
@@ -402,14 +392,16 @@ import Layout from "../layouts/Layout.astro";
 		flex-direction: column;
 		gap: 1rem;
 	}
-	.project-grid {
+	.project-grid,
+	.cert-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 1.5rem;
 		margin-top: 2rem;
 	}
 	.skill-item,
-	.project-card {
+	.project-card,
+	.cert-card {
 		background: #1e1e1e;
 		border: 1px solid #333;
 		border-radius: 12px;
@@ -423,62 +415,38 @@ import Layout from "../layouts/Layout.astro";
 		border-color: #4f39fa;
 	}
 
-	/* 6. Sección de Certificaciones (Bordes Definidos por Color) */
-	.cert-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-		gap: 1.5rem;
-		margin-top: 2rem;
-	}
+	/* 6. Certificaciones (Bordes Glow) */
 	.cert-card {
-		background: #1e1e1e;
-		padding: 1.5rem;
-		border-radius: 12px;
-		border: 1px solid #333;
 		display: flex;
 		flex-direction: column;
 		transition:
 			transform 0.3s ease,
 			border-color 0.3s ease,
 			box-shadow 0.3s ease;
-		position: relative;
 	}
 	.cert-card:hover {
 		transform: translateY(-5px);
 	}
-
-	/* Variantes de Color para Certificaciones */
 	.cert-card.gold {
 		border: 1px solid #ffd700;
 		box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1);
-	}
-	.cert-card.gold:hover {
-		box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
 	}
 	.cert-card.gold span {
 		background: #ffd700;
 		color: #000;
 		font-weight: bold;
 	}
-
 	.cert-card.academy {
 		border: 1px solid #4f39fa;
 		box-shadow: 0 4px 15px rgba(79, 57, 250, 0.1);
-	}
-	.cert-card.academy:hover {
-		box-shadow: 0 8px 25px rgba(79, 57, 250, 0.2);
 	}
 	.cert-card.academy span {
 		background: #4f39fa;
 		color: #fff;
 	}
-
 	.cert-card.tech {
 		border: 1px solid #da62c4;
 		box-shadow: 0 4px 15px rgba(218, 98, 196, 0.1);
-	}
-	.cert-card.tech:hover {
-		box-shadow: 0 8px 25px rgba(218, 98, 196, 0.2);
 	}
 	.cert-card.tech span {
 		background: #da62c4;
@@ -508,7 +476,7 @@ import Layout from "../layouts/Layout.astro";
 		font-family: monospace;
 	}
 
-	/* 7. Secciones Especiales (RaaS, VDD, Timeline) */
+	/* 7. Secciones Especiales */
 	.raas-container {
 		background: linear-gradient(135deg, #1e1e1e 0%, #252525 100%);
 		padding: 2rem;
@@ -566,7 +534,7 @@ import Layout from "../layouts/Layout.astro";
 		background: #da62c4;
 	}
 
-	/* 8. Footer y Socials */
+	/* 8. Footer, Socials & Badge */
 	.cta-container {
 		display: flex;
 		gap: 1rem;
@@ -634,20 +602,4 @@ import Layout from "../layouts/Layout.astro";
 			opacity: 0.4;
 		}
 	}
-	/* Estilo para los SVG manuales en el ticker */
-	.custom-icon {
-        width: 2.5rem;
-        height: 2.5rem;
-        margin: 0 2rem;
-        color: #666; /* Color gris igual al de los otros iconos */
-        flex-shrink: 0;
-        display: inline-block;
-        vertical-align: middle;
-        transition: color 0.3s ease, transform 0.2s ease;
-    }
-
-    .custom-icon:hover {
-        color: #da62c4; /* El color fucsia de tu portafolio */
-        transform: scale(1.1);
-    }
 </style>
