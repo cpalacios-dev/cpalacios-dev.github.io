@@ -1,92 +1,125 @@
 ---
 import Layout from "../layouts/Layout.astro";
+// Definimos el stack tecnológico una sola vez
+const techStack = [
+    { type: "devicon", icon: "devicon-python-plain colored" },
+    { type: "devicon", icon: "devicon-googlecloud-plain colored" },
+    { type: "img", src: "/icons/uipath.svg", alt: "UiPath" },
+    { type: "img", src: "/icons/appian.svg", alt: "Appian", css: "icon-wide" },
+    { type: "img", src: "/icons/blueprism.svg", alt: "Blue Prism", css: "icon-extra-wide" },
+    { type: "img", src: "https://cdn.simpleicons.org/n8n/FF6666", alt: "n8n" },
+    { type: "img", src: "/icons/pa.svg", alt: "Power Automate" },
+    { type: "devicon", icon: "devicon-docker-plain colored" },
+    { type: "devicon", icon: "devicon-playwright-plain colored" },
+    { type: "devicon", icon: "devicon-azuresqldatabase-plain colored" },
+    { type: "devicon", icon: "devicon-azure-plain colored" },
+    { type: "img", src: "https://cdn.simpleicons.org/github/181717", alt: "github" },
+    { type: "devicon", icon: "devicon-git-plain colored" },
+    { type: "devicon", icon: "devicon-dot-net-plain colored" }
+];
+
+// Definimos los repositorios en un arreglo
+const repositorios = [
+    {
+        titulo: "RaaS Automation: Previred",
+        url: "https://github.com/cpalacios-dev/raas-previred-automation-core",
+        descripcion: "API REST (Flask/Waitress) para extracción y centralización de indicadores previsionales. Implementa arquitectura RaaS v2.0, integrando <strong>Playwright</strong> y <strong>BS4</strong> para scraping, <strong>Pandas</strong> para ETL, almacenamiento en GCS y alertas vía SendGrid.",
+        tags: ["Flask", "Playwright", "Pandas", "GCP Storage", "SendGrid", "Pydantic"]
+    },
+    {
+        titulo: "IDP Smart Extractor (GenAI)",
+        url: "https://github.com/cpalacios-dev/idp-smart-extractor-service",
+        descripcion: "Servicio de procesamiento inteligente de documentos (IDP). Utiliza el modelo <strong>Gemini 3 Flash</strong> para transformar archivos PDF caóticos en datos estructurados JSON listos para sistemas ERP.",
+        tags: ["Gemini 3 Flash", "Flask", "PyPDF", "Pydantic"]
+    },
+    {
+        titulo: "Economic Data Scraper",
+        url: "https://github.com/cpalacios-dev/economic-data-ingestion-scraper",
+        descripcion: "Microservicio serverless diseñado para extracción, limpieza y estructuración de datos económicos chilenos. Preparado bajo principios POO para despliegue en GCP Cloud Run o AWS Lambda.",
+        tags: ["Python", "Requests", "Logging", "JSON"]
+    }
+	
+];
+
+
 ---
 
 <Layout title="Cristian Palacios | Portfolio Engineer & RPA Developer">
 	<main>
-		<section id="hero">
-			<h1>Cristian Palacios</h1>
-			<p class="role">
-				Ingeniero de Portafolios TI | Desarrollador RPA & Cloud
-			</p>
-			<div class="status-badge">
-				<span class="dot"></span> Disponible para nuevos desafíos
-			</div>
-			<div class="social-links">
-				<a
-					href="https://www.linkedin.com/in/cpalacios-borquez/"
-					target="_blank"
-					title="LinkedIn"
-				>
-					<i class="devicon-linkedin-plain"></i>
-				</a>
-				<a
-					href="https://github.com/cpalacios-dev"
-					target="_blank"
-					title="GitHub"
-				>
-					<i class="devicon-github-original"></i>
-				</a>
-				<a
-					href="mailto:cpalacios.borquez@gmail.com"
-					title="Enviar Email"
-				>
-					<i class="devicon-google-plain"></i>
-				</a>
-			</div>
-
+		<section id="hero" class="hero-section">
+			<div class="hero-image-container">
+                <img src="/perfil.png" alt="Cristian Palacios" class="hero-profile-photo" />
+            </div>
+            
+            <div class="hero-text-content">
+                <h1>Cristian Palacios</h1>
+                <p class="role">
+                    Ingeniero de Portafolios TI | Desarrollador RPA, Cloud & GenAI
+                </p>
+                <div class="status-badge">
+                    <span class="dot"></span> Disponible para nuevos desafíos
+                </div>
+                <div class="social-links">
+                    <a
+                        href="https://www.linkedin.com/in/cpalacios-borquez/"
+                        target="_blank"
+                        title="LinkedIn"
+                    >
+                        <i class="devicon-linkedin-plain"></i>
+                    </a>
+                    <a
+                        href="https://github.com/cpalacios-dev"
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        <i class="devicon-github-original"></i>
+                    </a>
+                    <a
+                        href="mailto:cpalacios.borquez@gmail.com"
+                        title="Enviar Email"
+                    >
+                        <i class="devicon-google-plain"></i>
+                    </a>
+                </div>
+	        </div>
 			<div class="description">
-				Especialista en modernización tecnológica mediante el diseño de
-				<strong>arquitecturas escalables en la nube (GCP)</strong> y la implementación
-				de modelos <strong>Robot as a Service (RaaS)</strong>. Lidero la
-				convergencia entre la visión estratégica y la solidez técnica.
-			</div>
-
+                Ingeniero Informático con un perfil híbrido que combina la ejecución técnica avanzada con la visión estratégica de la <strong>Gestión de Portafolios (VDD)</strong>. 
+                Traduzco requerimientos operativos complejos en soluciones de software de alto impacto bajo el modelo <strong>Robot as a Service (RaaS)</strong>. 
+                Mi enfoque va más allá de la automatización tradicional: desarrollo <strong>microservicios y APIs (Python/Flask)</strong>, diseño <strong>arquitecturas escalables (GCP, Serverless)</strong> e integro <strong>IA Generativa (GenAI)</strong> para llevar la eficiencia operativa y el retorno de inversión al siguiente nivel.
+            </div>
+			
 			<div class="tech-ticker">
-				<div class="ticker-content">
-					<i class="devicon-python-plain"></i>
-					<i class="devicon-googlecloud-plain"></i>
-					<i class="devicon-docker-plain"></i>
+                <div class="ticker-content">
+                    {/* Unimos el arreglo consigo mismo [...techStack, ...techStack] para duplicarlo automáticamente */}
+                    {[...techStack, ...techStack].map((tech) => (
+                        tech.type === "devicon" ? (
+                            <i class={tech.icon}></i>
+                        ) : (
+                            <img src={tech.src} class={`local-icon ${tech.css || ""}`} alt={tech.alt} />
+                        )
+                    ))}
+                </div>
+            </div>
 
-					<div class="local-icon icon-uipath" title="UiPath"></div>
-        			<div class="local-icon icon-appian" title="Appian"></div>
-        			<div class="local-icon icon-blueprism" title="Blue Prism"></div>
-        			<div class="local-icon icon-n8n" title="n8n"></div>
-
-					<i class="devicon-playwright-plain"></i>
-					<i class="devicon-azuresqldatabase-plain"></i>
-					<i class="devicon-github-original"></i>
-					<i class="devicon-dot-net-plain"></i>
-				</div>
-			</div>
 		</section>
 
-		<section id="expertise">
-			<h2>Stack Tecnológico y de Gestión</h2>
-			<div class="expertise-grid">
-				<div class="skill-item">
-					<i class="devicon-googlecloud-plain colored"></i>
-					<span
-						><strong>Cloud & DevOps:</strong> GCP (Cloud Run), Docker,
-						Arquitectura Serverless.</span
-					>
-				</div>
-				<div class="skill-item">
-					<i class="devicon-python-plain colored"></i>
-					<span
-						><strong>Backend & Automatización:</strong> Python, Playwright,
-						orquestación con Appian y n8n.</span
-					>
-				</div>
-				<div class="skill-item">
-					<i class="devicon-jira-plain colored"></i>
-					<span
-						><strong>Gestión Estratégica:</strong> VDD, Priorización WSJF/RICE,
-						Metodologías Ágiles (Scrum).</span
-					>
-				</div>
-			</div>
-		</section>
+	    <section id="expertise">
+            <h2>Core Expertise y Stack</h2>
+            <div class="expertise-grid">
+                <div class="skill-item">
+                    <i class="devicon-googlecloud-plain colored"></i>
+                    <span><strong>Cloud & Arquitectura:</strong> GCP (Cloud Run, Secret Manager), Microservicios (RaaS), Integración de APIs (REST/SOAP).</span>
+                </div>
+                <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i>
+                    <span><strong>Automatización & IA:</strong> Python, Playwright, Appian, n8n, UiPath, Power Automate. Procesamiento inteligente de documentos (OCR/NLP).</span>
+                </div>
+                <div class="skill-item">
+                    <i class="devicon-jira-plain colored"></i>
+                    <span><strong>Gestión, DevOps & Agilidad:</strong> CI/CD, Git (GitHub/GitLab), Ciclo de vida del software (SDLC), Scrum y PMBOK.</span>
+                </div>
+            </div>
+        </section>
 
 		<section id="raas-architecture">
 			<div class="raas-container">
@@ -105,50 +138,40 @@ import Layout from "../layouts/Layout.astro";
 		</section>
 
 		<section id="proyectos">
-			<h2>Experiencia de Alto Impacto</h2>
-			<div class="project-grid">
-				<article class="project-card">
-					<header>
-						<span class="company">SURA AFP CAPITAL</span>
-						<h3>Modelo Robot as a Service (RaaS)</h3>
-					</header>
-					<p>
-						Desarrollo de microservicios transaccionales en <strong
-							>Cloud Run</strong
-						> e integración de
-						<strong>IA (OCR/NLP)</strong> para la gestión automatizada
-						de nóminas críticas.
-					</p>
-					<div class="tags">
-						<span>GCP</span><span>Python</span><span>IA</span>
-					</div>
-				</article>
+            <h2>Experiencia de Alto Impacto</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <header>
+                        <span class="company">SURA AFP CAPITAL</span>
+                        <h3>Modelo Robot as a Service (RaaS)</h3>
+                    </header>
+                    <p>
+                        Desarrollo de microservicios transaccionales en <strong>Cloud Run</strong> e integración de <strong>IA (OCR/NLP)</strong> para la gestión automatizada de nóminas críticas, reduciendo drásticamente la carga operativa manual.
+                    </p>
+                    <div class="tags">
+                        <span>GCP</span><span>Python</span><span>Playwright</span><span>OCR/NLP</span>
+                    </div>
+                </article>
 
-				<article class="project-card">
-					<header>
-						<span class="company">CLARO CHILE S.A.</span>
-						<h3>Modernización e Integración</h3>
-					</header>
-					<p>
-						Liderazgo en la integración de sistemas legacy mediante <strong
-							>APIs REST/SOAP</strong
-						>, mejorando la interoperabilidad y experiencia de
-						usuario.
-					</p>
-					<div class="tags">
-						<span>APIs</span><span>Interoperabilidad</span><span
-							>Liderazgo</span
-						>
-					</div>
-				</article>
-			</div>
-		</section>
+                <article class="project-card">
+                    <header>
+                        <span class="company">CLARO CHILE S.A.</span>
+                        <h3>Modernización e Integración API</h3>
+                    </header>
+                    <p>
+                        Liderazgo técnico en la integración de sistemas legacy del sector telecomunicaciones mediante <strong>APIs REST/SOAP</strong>, asegurando la escalabilidad y mejorando la interoperabilidad corporativa.
+                    </p>
+                    <div class="tags">
+                        <span>APIs</span><span>Arquitectura</span><span>SDLC</span>
+                    </div>
+                </article>
+            </div>
+        </section>
 
 		<section id="vdd-strategy">
 			<h2>Estrategia VDD (Value Driven Delivery)</h2>
-			<p>
-				Priorización de backlog basada en modelos matemáticos de
-				eficiencia:
+			<p style="color: #a3a3a3; margin-bottom: 1.5rem;">
+				No automatizo a ciegas. Aseguro la alineación con los objetivos del negocio mediante la gestión de stakeholders y la priorización de backlogs utilizando modelos matemáticos de eficiencia:
 			</p>
 			<div class="vdd-table-container">
 				<table>
@@ -185,7 +208,7 @@ import Layout from "../layouts/Layout.astro";
 			<div class="cert-grid">
 				<div class="cert-card gold">
 					<div class="cert-header">
-						<i class="devicon-blueprism-plain colored"></i>
+						<img src="/icons/blueprism.svg" class="local-icon-bp" alt="Blue Prism" />
 						<span>Oficial</span>
 					</div>
 					<h4>Blue Prism Certified Developer</h4>
@@ -194,7 +217,7 @@ import Layout from "../layouts/Layout.astro";
 
 				<div class="cert-card academy">
 					<div class="cert-header">
-						<i class="devicon-appian-plain colored"></i>
+						<img src="/icons/appian.svg" class="local-icon-appian" alt="Appian" />
 						<span>Academy 2026</span>
 					</div>
 					<h4>Appian Developer</h4>
@@ -203,7 +226,7 @@ import Layout from "../layouts/Layout.astro";
 
 				<div class="cert-card academy">
 					<div class="cert-header">
-						<i class="devicon-uipath-plain colored"></i>
+						<img src="/icons/uipath.svg" class="" alt="uipath" />
 						<span>Academy</span>
 					</div>
 					<h4>RPA Developer Foundation</h4>
@@ -217,7 +240,7 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 					<h4>Análisis de Datos con Python</h4>
 					<p>Desafío Latam | Oct 2025</p>
-					<span class="id">ID: omfqaqs5m0</span>
+					
 				</div>
 
 				<div class="cert-card tech">
@@ -231,7 +254,7 @@ import Layout from "../layouts/Layout.astro";
 
 				<div class="cert-card tech">
 					<div class="cert-header">
-						<i class="devicon-microsoft-plain colored"></i>
+						<img src="/icons/pa.svg" class="" alt="Power Automate" />
 						<span>Formación</span>
 					</div>
 					<h4>Power Automate Desktop / Cloud</h4>
@@ -240,52 +263,127 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</section>
 		<section id="trayectoria">
-			<h2>Trayectoria y Formación</h2>
-			<div class="timeline">
-				<div class="timeline-item">
-					<span class="year">2026</span>
-					<h4>Ingeniero de Portafolios TI & RPA</h4>
-					<p>
-						Kibernum | Especialista en automatización para SURA AFP
-						Capital.
-					</p>
-				</div>
-				<div class="timeline-item">
-					<span class="year">2024</span>
-					<h4>Posgrado en Gestión de Portafolios</h4>
-					<p>
-						Tecnológico de Monterrey | Especialización en Value
-						Driven Delivery.
-					</p>
-				</div>
-				<div class="timeline-item">
-					<span class="year">2023 - 2025</span>
-					<h4>Líder de Proyectos de Integración</h4>
-					<p>Claro Chile | Gestión de modernización tecnológica.</p>
-				</div>
-				<div class="timeline-item">
-					<span class="year">2020</span>
-					<h4>Ingeniería en Informática</h4>
-					<p>IPCHILE | Gestión de Sistemas y Procesos.</p>
-				</div>
-			</div>
-		</section>
+            <h2>Trayectoria y Formación</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="year">2025 - 2026</span>
+                        <h4>Ingeniero de Portafolios TI & Desarrollador RPA</h4>
+                        <span class="company">SURA AFP Capital (Kibernum)</span>
+                        <p>
+                            Desarrollo de arquitectura RaaS y microservicios transaccionales. Orquestación de procesos críticos utilizando <strong>Python, Playwright</strong> y plataformas automatizadas (UiPath, Appian), logrando eficiencia operativa a gran escala.
+                        </p>
+                    </div>
+                </div>
 
-		<section id="contacto">
-			<div class="cta-container">
-				<a
-					href="https://www.linkedin.com/in/cpalacios-borquez/"
-					target="_blank"
-					class="btn linkedin">LinkedIn</a
-				>
-				<a href="mailto:cpalacios.borquez@gmail.com" class="btn mail"
-					>Email</a
-				>
-				<a href="/cv_cpalacios.pdf" download class="btn cv"
-					>Descargar CV</a
-				>
-			</div>
-		</section>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="year">2023 - 2025</span>
+                        <h4>Líder de Proyectos de Integración & RPA</h4>
+                        <span class="company">Claro Chile / Consultoría (EY)</span>
+                        <p>
+                            Liderazgo en la modernización tecnológica e integración de sistemas legacy mediante APIs REST/SOAP. Automatización de procesos core para telecomunicaciones y el <strong>sector bancario (Scotiabank, Itaú, Santander)</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="year">2024</span>
+                        <h4>Posgrado en Gestión de Portafolios</h4>
+                        <span class="company">Tecnológico de Monterrey</span>
+                        <p>
+                            Especialización estratégica en <strong>Value Driven Delivery (VDD)</strong>, marcos ágiles (Scrum) y PMBOK. Enfoque en vincular la ejecución tecnológica con los objetivos y el ROI del negocio.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="year">2020</span>
+                        <h4>Ingeniería en Informática</h4>
+                        <span class="company">IPCHILE</span>
+                        <p>
+                            Titulación profesional con enfoque en desarrollo de software, despliegue de bases de datos y fundamentos sólidos de arquitectura de sistemas.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+		<section id="github-repos">
+    <h2>Arquitecturas de Referencia (GitHub)</h2>
+    <p style="color: #a3a3a3; margin-bottom: 2rem; line-height: 1.6;">
+        Por estrictos acuerdos de confidencialidad (NDA) con el sector bancario y telco,
+        mi código de producción corporativo es privado. 
+        Estos repositorios públicos sirven como demostración técnica de mis estándares de arquitectura, 
+        POO y despliegue continuo.
+    </p>
+    
+    <div class="repo-grid">
+        {repositorios.map((repo) => (
+            <a href={repo.url} target="_blank" class="repo-card">
+                <div class="repo-header">
+                    <i class="fa-brands fa-github"></i>
+                    <h3>{repo.titulo}</h3>
+                </div>
+                <p set:html={repo.descripcion}></p>
+                <div class="tags">
+                    {repo.tags.map((tag) => (
+                        <span>{tag}</span>
+                    ))}
+                </div>
+            </a>
+        ))}
+    </div>
+</section>
+
+		<section id="contacto" class="contact-section">
+            <div class="contact-content">
+                <h2>¿Listo para optimizar tus procesos?</h2>
+                <p>
+                    Actualmente estoy abierto a nuevos desafíos. Ya sea que busques modernizar la arquitectura de tu empresa o escalar operaciones con RPA, mi bandeja de entrada está abierta.
+                </p>
+                <div class="cta-container">
+                    <a
+                        href="https://www.linkedin.com/in/cpalacios-borquez/"
+                        target="_blank"
+                        class="btn btn-linkedin"
+                        title="Conectar en LinkedIn"
+                    >
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                    
+                    <a 
+                        href="https://wa.me/56942056649?text=Hola%20Cristian,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte." 
+                        target="_blank"
+                        class="btn btn-whatsapp"
+                        title="Escribir por WhatsApp"
+                    >
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+
+                    <a 
+                        href="mailto:cpalacios.borquez@gmail.com" 
+                        class="btn btn-mail"
+                        title="Enviar Email"
+                    >
+                        <i class="fa-solid fa-envelope"></i> Email
+                    </a>
+                    
+                    <a 
+                        href="/cv_cpalacios.pdf" 
+                        download 
+                        class="btn btn-cv"
+                        title="Descargar Currículum"
+                    >
+                        <i class="fa-solid fa-file-pdf"></i> CV
+                    </a>
+                </div>
+            </div>
+        </section>
 	</main>
 </Layout>
 <style>
@@ -301,20 +399,93 @@ import Layout from "../layouts/Layout.astro";
 		overflow-x: hidden;
 	}
 
+	/* --- SECCIÓN HERO ACTUALIZADA CON FOTO --- */
+    .hero-section {
+        display: flex;
+        flex-wrap: wrap; /* Para móviles */
+        align-items: center; /* Centrado vertical */
+        justify-content: center; /* Centrado horizontal */
+        gap: 3rem; /* Espacio entre foto y texto */
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        text-align: left; /* Alineación de texto por defecto */
+    }
+
+    .hero-image-container {
+        flex: 0 0 auto; /* La foto no se estira */
+    }
+
+    .hero-profile-photo {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%; /* Foto redonda */
+        object-fit: cover; /* Asegura que la foto no se deforme */
+        
+        /* Diseño del anillo tecnológico */
+        background: padding-box, linear-gradient(45deg, #4f39fa, #da62c4) border-box;
+        border: 4px solid transparent; /* Ancho del anillo */
+        
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(218, 98, 196, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hero-profile-photo:hover {
+        transform: scale(1.03);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(218, 98, 196, 0.3);
+    }
+
+    .hero-text-content {
+        flex: 1 1 400px; /* El texto ocupa el resto del espacio */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start; /* Alinea los links y badge a la izquierda */
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-top: 0;
+        margin-bottom: 0.2rem; /* Menos espacio para el h1 */
+        background: linear-gradient(45deg, #4f39fa, #da62c4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero-text-content .role {
+        font-size: 1.4rem;
+        color: #a3a3a3;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+    }
+
+    .hero-text-content .status-badge,
+    .hero-text-content .social-links {
+        margin-left: 0; /* Asegura alineación izquierda */
+        padding-left: 0;
+    }
+
+    .hero-text-content .social-links {
+        display: flex;
+        gap: 1.2rem; /* Espacio uniforme entre iconos */
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* La descripción se mantiene centrada debajo de la foto y texto */
+    .hero-section .description {
+        width: 100%; /* Ocupa todo el ancho */
+        font-size: 1.15rem;
+        max-width: 700px; /* Limita ancho para legibilidad */
+        margin: 1rem auto 0 auto;
+        line-height: 1.6;
+        color: #d1d1d1;
+    }
+
+    
+
 	/* 2. Tipografía y Títulos */
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin-bottom: 0;
-		background: linear-gradient(45deg, #4f39fa, #da62c4);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	.role {
-		font-size: 1.5rem;
-		color: #a3a3a3;
-		margin-top: 0.5rem;
-	}
+
 	section {
 		margin-top: 4rem;
 	}
@@ -328,127 +499,58 @@ import Layout from "../layouts/Layout.astro";
 		outline: none;
 	}
 
-	/* 4. Ticker de Tecnologías (Contenido al ancho del main) */
-    .tech-ticker {
+	/* 4. Estilos de iconos  */
+	.tech-ticker {
         width: 100%;
         overflow: hidden;
         background: #1e1e1e;
-        padding: 1.5rem 0;
+        padding: 2rem 0;
         margin-top: 2rem;
         border-radius: 12px;
         border: 1px solid #333;
+		white-space: nowrap;
     }
 
     .ticker-content {
         display: flex;
-        align-items: center; /* Alineación vertical perfecta */
+        align-items: center;
         width: max-content;
         animation: scroll 35s linear infinite;
     }
 
-    /* Estilos base para TODOS los iconos (Devicon e Inline) */
+    /* ESTADO INICIAL: Todos en Gris */
     .ticker-content i,
-    .ticker-content svg {
+    .ticker-content .local-icon {
         margin: 0 2.5rem;
         flex-shrink: 0;
-        transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+        height: 2.8rem; /* Altura uniforme para todos */
+        width: auto;    /* Que el ancho sea proporcional */
+        filter: grayscale(100%) brightness(0.7); /* Gris y un poco apagado */
+        transition: all 0.4s ease;
     }
 
-    /* 4.1 Estilo para iconos de librería i (Devicon) */
+    /* ESTADO HOVER: Recuperan Color Original */
+    .ticker-content i:hover,
+    .ticker-content .local-icon:hover {
+        filter: grayscale(0%) brightness(1); /* Color real y brillo normal */
+        transform: scale(1.15);
+    }
+
+    /* Ajuste para los iconos de fuente de Devicon */
     .ticker-content i {
-        font-size: 2.5rem; /* Un poco más grande para mejor visibilidad */
-        color: #666; /* Gris base */
+        font-size: 2.8rem;
+        display: flex;
+        align-items: center;
     }
 
-    .ticker-content i:hover {
-        color: #da62c4; /* Fucsia en hover */
-        transform: scale(1.1);
+    /* Nivelación para logos muy anchos (Appian y Blue Prism) */
+    /* Aunque tengan el mismo alto, les damos un poco más de aire si es necesario */
+    .icon-wide {
+        height: 2.2rem !important; /* Un poco más bajo para no verse gigante al ser ancho */
     }
 
-    /* 4.2 Estilo para SVGs Inline (RPA/Automatización) */
-    .ticker-content svg {
-        width: 2.5rem; /* Tamaño base para SVGs */
-        height: 2.5rem;
-        color: #666; /* Gris base */
-        fill: currentColor; /* Importante: obliga al SVG a usar el color del texto */
-    }
-
-    /* EFECTO MASTER: Forzar el color rosa en hover para TODOS los SVGs */
-    .ticker-content svg:hover {
-        color: #da62c4 !important; /* Fuerza el color fucsia */
-        fill: #da62c4 !important;  /* Fuerza el relleno fucsia */
-        transform: scale(1.1);
-    }
-
-    /* 4.3 Ajustes de Tamaño Específicos (Nivelación Visual) */
-    
-    /* Appian suele verse pequeño, lo agrandamos */
-    .ticker-content svg.icon-appian {
-        width: 3.2rem;
-        height: 3.2rem;
-    }
-
-    /* Blue Prism suele verse muy pequeño, lo agrandamos más */
-    .ticker-content svg.icon-blueprism {
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-
-    /* n8n y UiPath suelen estar bien, pero aseguramos tamaño */
-    .ticker-content svg.icon-uipath,
-    .ticker-content svg.icon-n8n {
-        width: 2.8rem;
-        height: 2.8rem;
-    }
-	/* Estilo base para tus SVGs locales */
-    /* Estilo base para las siluetas de los logos */
-    .local-icon {
-        margin: 0 2.5rem;
-        background-color: #666; /* Color gris inicial */
-        display: inline-block;
-        flex-shrink: 0;
-        
-        /* Configuración de Máscara */
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: contain;
-        mask-size: contain;
-        -webkit-mask-position: center;
-        mask-position: center;
-        
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    /* EFECTO HOVER: Pintamos la silueta de ROSA */
-    .local-icon:hover {
-        background-color: #da62c4 !important;
-        transform: scale(1.1);
-    }
-
-    /* ASIGNACIÓN DE ARCHIVOS Y TAMAÑOS (Nivelación Visual) */
-    
-    .icon-uipath { 
-        -webkit-mask-image: url('/icons/uipath.svg'); 
-        mask-image: url('/icons/uipath.svg'); 
-        width: 3rem; height: 3rem; 
-    }
-    
-    .icon-appian { 
-        -webkit-mask-image: url('/icons/appian.svg'); 
-        mask-image: url('/icons/appian.svg'); 
-        width: 4.5rem; height: 3rem; /* Más ancho para que se lea */
-    }
-    
-    .icon-blueprism { 
-        -webkit-mask-image: url('/icons/blueprism.svg'); 
-        mask-image: url('/icons/blueprism.svg'); 
-        width: 5.5rem; height: 3rem; /* Mucho más ancho porque es horizontal */
-    }
-    
-    .icon-n8n { 
-        -webkit-mask-image: url('/icons/n8n.svg'); 
-        mask-image: url('/icons/n8n.svg'); 
-        width: 3rem; height: 3rem; 
+    .icon-extra-wide {
+        height: 2rem !important; /* Blue prism es texto largo, mejor bajarle un pelo el alto */
     }
 
     @keyframes scroll {
@@ -532,6 +634,20 @@ import Layout from "../layouts/Layout.astro";
 	.cert-header i {
 		font-size: 1.8rem;
 	}
+	.cert-header img {
+		height: 1.8rem;
+		width: 1.8rem;
+	}
+
+	.cert-header .local-icon-bp{
+		width: 8rem;
+	}
+
+	.cert-header .local-icon-appian{
+		width: 5rem;
+	}
+
+    
 	.cert-header span {
 		font-size: 0.65rem;
 		padding: 2px 8px;
@@ -583,86 +699,196 @@ import Layout from "../layouts/Layout.astro";
 		background-color: #252525;
 		color: #da62c4;
 	}
+/* --- LÍNEA DE TIEMPO MODERNA --- */
+    .timeline {
+        border-left: 2px solid #333; /* Línea principal más sutil */
+        margin-left: 1rem;
+        padding-left: 2.5rem;
+        position: relative;
+        margin-top: 2rem;
+    }
+    
+    .timeline-item {
+        position: relative;
+        margin-bottom: 2.5rem;
+    }
+    
+    /* El "Nodo" o punto en la línea de tiempo */
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: calc(-2.5rem - 7px); /* Centrado exacto sobre la línea */
+        top: 1.5rem; /* Alineado con la tarjeta */
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #da62c4;
+        border: 3px solid #1e1e1e; /* Crea un efecto de anillo */
+        box-shadow: 0 0 0 2px #4f39fa; /* Borde exterior morado */
+        z-index: 1;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
 
-	.timeline {
-		border-left: 2px solid #4f39fa;
-		margin-left: 1rem;
-		padding-left: 2rem;
-	}
-	.timeline-item {
-		position: relative;
-		margin-bottom: 2.5rem;
-	}
-	.timeline-item::before {
-		content: "";
-		position: absolute;
-		left: calc(-2rem - 6px);
-		top: 5px;
-		width: 10px;
-		height: 10px;
-		border-radius: 50%;
-		background: #da62c4;
-	}
+    /* La Tarjeta de Contenido */
+    .timeline-content {
+        background: #1e1e1e;
+        border: 1px solid #333;
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        position: relative;
+    }
 
-	/* 8. Footer, Socials & Badge */
-	.cta-container {
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		margin-top: 5rem;
-		padding-bottom: 5rem;
-	}
-	.btn {
-		padding: 0.8rem 1.5rem;
-		border-radius: 8px;
-		font-weight: bold;
-		transition: 0.2s;
-	}
-	.linkedin {
-		background: #0077b5;
-		color: white;
-	}
-	.mail {
-		background: #4f39fa;
-		color: white;
-	}
-	.cv {
-		border: 1px solid #da62c4;
-		color: #da62c4;
-	}
+    /* Efecto Hover: La tarjeta avanza y el nodo brilla */
+    .timeline-item:hover .timeline-content {
+        border-color: #4f39fa;
+        transform: translateX(8px); /* Se mueve un poco a la derecha */
+    }
+    .timeline-item:hover::before {
+        background: #fff;
+        box-shadow: 0 0 12px #da62c4, 0 0 0 2px #da62c4;
+    }
 
-	.social-links {
-		display: flex;
-		gap: 1.5rem;
-		margin-top: 1rem;
-		margin-bottom: 1.5rem;
-	}
-	.social-links a {
-		color: #a3a3a3;
-		font-size: 1.8rem;
-		transition: 0.3s;
-		display: inline-block;
-	}
-	.social-links a:hover {
-		color: #da62c4;
-		transform: translateY(-3px);
-	}
+    /* Tipografía interna de la línea de tiempo */
+    .timeline-content .year {
+        display: inline-block;
+        background: rgba(79, 57, 250, 0.15);
+        color: #4ade80; /* Un verde que resalta disponibilidad/actividad */
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(79, 57, 250, 0.3);
+    }
+    
+    .timeline-content h4 {
+        margin: 0 0 0.3rem 0;
+        font-size: 1.3rem;
+        color: #ffffff;
+    }
+    
+    .timeline-content .company {
+        display: block;
+        color: #da62c4;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .timeline-content p {
+        color: #a3a3a3;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+    }
 
-	.status-badge {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		font-size: 0.85rem;
-		color: #4ade80;
-		margin-top: 0.5rem;
-	}
-	.dot {
-		width: 8px;
-		height: 8px;
-		background-color: #4ade80;
-		border-radius: 50%;
-		animation: pulse 2s infinite;
-	}
+	/* --- SECCIÓN DE CONTACTO (CTA) --- */
+    .contact-section {
+        margin-top: 6rem;
+        margin-bottom: 2rem;
+        padding: 4rem 2rem;
+        background: linear-gradient(180deg, #1a1a1a 0%, #111111 100%);
+        border-radius: 16px;
+        border: 1px solid #333;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(45deg, #4f39fa, #da62c4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .contact-section p {
+        color: #a3a3a3;
+        font-size: 1.05rem;
+        max-width: 550px;
+        margin: 0 auto 2.5rem auto;
+        line-height: 1.6;
+    }
+
+    .cta-container {
+        display: flex;
+        gap: 1.2rem;
+        justify-content: center;
+        flex-wrap: wrap; /* Asegura que no se rompa en móviles */
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        padding: 0.8rem 1.8rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .btn i {
+        font-size: 1.3rem;
+    }
+
+    /* Botón LinkedIn */
+    .btn-linkedin {
+        background: #0077b5;
+        color: white;
+        border: 1px solid #0077b5;
+        box-shadow: 0 4px 15px rgba(0, 119, 181, 0.2);
+    }
+    .btn-linkedin:hover {
+        background: #005885;
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(0, 119, 181, 0.4);
+    }
+
+    /* Botón Email (Usa el degradado de tu marca) */
+    .btn-mail {
+        background: linear-gradient(45deg, #4f39fa, #da62c4);
+        color: white;
+        border: 1px solid transparent;
+        box-shadow: 0 4px 15px rgba(218, 98, 196, 0.2);
+    }
+    .btn-mail:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(218, 98, 196, 0.5);
+        filter: brightness(1.1);
+    }
+
+    /* Botón CV (Estilo Outline para equilibrio visual) */
+    .btn-cv {
+        background: transparent;
+        border: 2px solid #da62c4;
+        color: #ffffff;
+    }
+    .btn-cv:hover {
+        background: rgba(218, 98, 196, 0.1);
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(218, 98, 196, 0.2);
+        color: #da62c4;
+    }
+	/* Botón WhatsApp */
+    .btn-whatsapp {
+        background: #25D366; /* Color oficial de WhatsApp */
+        color: white;
+        border: 1px solid #25D366;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+    }
+    .btn-whatsapp:hover {
+        background: #1ebe57; /* Un tono ligeramente más oscuro para el hover */
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    }
+
 	@keyframes pulse {
 		0%,
 		100% {
@@ -672,4 +898,164 @@ import Layout from "../layouts/Layout.astro";
 			opacity: 0.4;
 		}
 	}
+
+	/* Estilos para las etiquetas de tecnologías en las tarjetas de proyectos */
+	.tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    .tags span {
+        background: rgba(218, 98, 196, 0.1);
+        color: #da62c4;
+        font-size: 0.75rem;
+        padding: 0.2rem 0.6rem;
+        border-radius: 4px;
+        border: 1px solid rgba(218, 98, 196, 0.3);
+    }
+
+/* --- SECCIÓN REPOSITORIOS GITHUB --- */
+    .repo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .repo-card {
+        background: #151515;
+        border: 1px solid #333;
+        border-radius: 12px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .repo-card:hover {
+        transform: translateY(-5px);
+        border-color: #a3a3a3; /* Un gris más claro al pasar el mouse */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .repo-header {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .repo-header i {
+        font-size: 1.5rem;
+        color: #ffffff;
+    }
+
+    .repo-header h3 {
+        margin: 0;
+        font-size: 1.15rem;
+        color: #ffffff;
+    }
+
+    .repo-card p {
+        color: #a3a3a3;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+        flex-grow: 1; /* Empuja los tags hacia el fondo */
+    }
+
+    /* Reutilizamos la clase .tags que ya creamos antes, 
+       pero si necesitas asegurarte de que se alineen al fondo: */
+    .repo-card .tags {
+        margin-top: auto;
+    }
+
+	/* =========================================
+       PARCHE DE SEGURIDAD RESPONSIVA (MÓVILES)
+       ========================================= */
+
+
+
+    /* 1. Protección para la Tabla VDD */
+    /* Evita que la tabla rompa el ancho de la pantalla en móviles, 
+       permitiendo hacer scroll horizontal solo dentro de la tabla */
+    .vdd-table-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+    }
+
+    /* 2. Protección para los Grids (Tarjetas) */
+    /* El uso de 'min(100%, 300px)' asegura que si la pantalla es menor a 300px, 
+       la tarjeta se adapte al 100% y no genere scroll horizontal indeseado */
+    .project-grid,
+    .cert-grid,
+    .expertise-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    }
+
+	/* MEDIA QUERY PARA MÓVILES (Estilo columna centrada) */
+    @media (max-width: 768px) {
+        .hero-section {
+            flex-direction: column;
+            gap: 1.5rem; /* Reducimos el gap general */
+            text-align: center; 
+        }
+
+        .hero-text-content {
+            flex: 1 1 auto; /* FIX: Quitamos los 400px para que no empuje hacia abajo */
+            align-items: center; 
+        }
+
+        .hero-profile-photo {
+            width: 150px;
+            height: 150px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero-text-content .role {
+            font-size: 1.2rem;
+        }
+
+        .hero-section .description {
+            margin-top: 0; /* FIX: Quitamos el margen extra porque el 'gap' ya hace el trabajo */
+            font-size: 1.05rem; /* Un pelín más pequeño para que lea mejor en móvil */
+        }
+    }
+
+    /* 3. Ajuste del Timeline para móviles */
+    @media (max-width: 600px) {
+        .timeline {
+            margin-left: 0.5rem;
+            padding-left: 1.5rem;
+        }
+        .timeline-item::before {
+            left: calc(-1.5rem - 7px);
+            width: 10px;
+            height: 10px;
+        }
+        .timeline-content {
+            padding: 1.2rem;
+        }
+        .timeline-content h4 {
+            font-size: 1.15rem;
+        }
+    }
+
+    /* 4. Ajuste de Títulos para móviles */
+    @media (max-width: 400px) {
+        h1 { font-size: 2.2rem !important; }
+        .role { font-size: 1.1rem !important; }
+        .contact-section { padding: 3rem 1.5rem; }
+        .btn { width: 100%; } /* Botones ocupan todo el ancho en móviles */
+    }
+
+
+	
 </style>

@@ -1,46 +1,48 @@
-# Astro Starter Kit: Basics
+# Cristian Palacios - Portafolio Profesional 🚀
 
-```sh
-npm create astro@latest -- --template basics
-```
+<img src="https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white" /> | <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> | <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white" /> | <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Portafolio personal de **Cristian Palacios**, Ingeniero de Portafolios TI y Desarrollador RPA, Cloud & GenAI. Diseñado para destacar experiencia en arquitecturas escalables, modelos Robot as a Service (RaaS) y estrategias de entrega de valor (VDD).
 
-## 🚀 Project Structure
+🌐 **Visita el sitio en vivo:** [cpalacios-dev.github.io](https://cpalacios-dev.github.io)
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🛠️ Stack Tecnológico
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+Este proyecto fue construido priorizando el rendimiento, la accesibilidad y el diseño responsivo:
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+* **Framework:** [Astro](https://astro.build/) (Generación de sitios estáticos para tiempos de carga ultrarrápidos).
+* **Estilos:** CSS3 Nativo (Uso avanzado de Flexbox, CSS Grid, variables CSS y animaciones `@keyframes`).
+* **Iconografía:** [Devicon](https://devicon.dev/), FontAwesome y SVGs locales optimizados.
+* **Despliegue:** GitHub Pages.
 
-## 🧞 Commands
+## 💡 Características Principales
 
-All commands are run from the root of the project, from a terminal:
+* **Diseño Híbrido (Gris a Color):** Implementación de filtros CSS avanzados (`grayscale`, `brightness`) para unificar la paleta visual de logos heterogéneos, revelando sus colores originales mediante interacciones `:hover`.
+* **Tech Ticker Infinito:** Marquesina de logotipos de tecnologías (RPA, Cloud, DevOps) animada de forma fluida y continua.
+* **Totalmente Responsivo:** Adaptación fluida desde monitores ultrawide hasta dispositivos móviles pequeños utilizando enfoques `mobile-first` y técnicas de compensación de flexbox.
+* **Secciones Clave:** Hero impactante con foto de perfil, Matriz VDD (Value Driven Delivery), Core Expertise, Timeline de Trayectoria, Arquitecturas de Referencia y Call to Action.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 👨‍💻 Ejecución Local
 
-## 👀 Want to learn more?
+Si deseas clonar y probar este proyecto en tu entorno local, sigue estos pasos:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
+2. **Levantar el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+El sitio estará disponible en `http://localhost:4321`.
+
+3. **Construir para producción:**
+    ```Bash
+    npm run build
+    ```
+## 📫 Contacto
+
+LinkedIn: [Cristian Palacios](https://www.linkedin.com/in/cpalacios-borquez/)
+
+Email: cpalacios.borquez@gmail.com
+
