@@ -48,10 +48,10 @@ import Layout from "../layouts/Layout.astro";
 					<i class="devicon-googlecloud-plain"></i>
 					<i class="devicon-docker-plain"></i>
 
-					<img src="/icons/uipath.svg" class="local-icon" alt="UiPath" />
-       			    <img src="/icons/appian.svg" class="local-icon" alt="Appian" />
-        			<img src="/icons/Blue_Prism_Logo.svg" class="local-icon" alt="Blue Prism" />
-        			<img src="/icons/n8n.svg" class="local-icon" alt="n8n" />
+					<img src="/icons/uipath.svg" class="local-icon icon-uipath" alt="UiPath" />
+       				<img src="/icons/appian.svg" class="local-icon icon-appian" alt="Appian" />
+        			<img src="/icons/blueprism.svg" class="local-icon icon-blueprism" alt="Blue Prism" />
+        			<img src="/icons/n8n.svg" class="local-icon icon-n8n" alt="n8n" />
 
 					<i class="devicon-playwright-plain"></i>
 					<i class="devicon-azuresqldatabase-plain"></i>
@@ -328,63 +328,109 @@ import Layout from "../layouts/Layout.astro";
 		outline: none;
 	}
 
-	/* 4. Ticker de Tecnologías (Híbrido: Devicon + Locales) */
-	.tech-ticker {
-		width: 100%;
-		overflow: hidden;
-		background: #1e1e1e;
-		padding: 1.5rem 0;
-		margin-top: 2rem;
-		border-radius: 12px;
-		border: 1px solid #333;
-	}
+	/* 4. Ticker de Tecnologías (Contenido al ancho del main) */
+    .tech-ticker {
+        width: 100%;
+        overflow: hidden;
+        background: #1e1e1e;
+        padding: 1.5rem 0;
+        margin-top: 2rem;
+        border-radius: 12px;
+        border: 1px solid #333;
+    }
 
-	.ticker-content {
-		display: flex;
-		align-items: center; /* Alinea verticalmente iconos y SVGs */
-		width: max-content;
-		animation: scroll 35s linear infinite;
-	}
+    .ticker-content {
+        display: flex;
+        align-items: center; /* Alineación vertical perfecta */
+        width: max-content;
+        animation: scroll 35s linear infinite;
+    }
 
-	/* Estilo para iconos de librería i */
-	.ticker-content i {
-		font-size: 2.2rem;
-		margin: 0 2.5rem;
-		color: #666;
-		flex-shrink: 0;
-		transition:
-			color 0.3s ease,
-			transform 0.2s ease;
-	}
-	.ticker-content i:hover {
-		color: #da62c4;
-		transform: scale(1.1);
-	}
+    /* Estilos base para TODOS los iconos (Devicon e Inline) */
+    .ticker-content i,
+    .ticker-content svg {
+        margin: 0 2.5rem;
+        flex-shrink: 0;
+        transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    }
 
-	/* Estilo para tus SVGs locales (uipath, appian, etc) */
-	.local-icon {
-		width: 2.2rem;
-		height: auto;
-		margin: 0 2.5rem;
-		filter: grayscale(100%) opacity(0.6); /* Los hace grises y sutiles */
-		transition:
-			filter 0.3s ease,
-			transform 0.2s ease;
-		flex-shrink: 0;
-	}
-	.local-icon:hover {
-		filter: grayscale(0%) opacity(1); /* Recuperan color al pasar el mouse */
-		transform: scale(1.1);
-	}
+    /* 4.1 Estilo para iconos de librería i (Devicon) */
+    .ticker-content i {
+        font-size: 2.5rem; /* Un poco más grande para mejor visibilidad */
+        color: #666; /* Gris base */
+    }
 
-	@keyframes scroll {
-		0% {
-			transform: translateX(0);
-		}
-		100% {
-			transform: translateX(-50%);
-		}
-	}
+    .ticker-content i:hover {
+        color: #da62c4; /* Fucsia en hover */
+        transform: scale(1.1);
+    }
+
+    /* 4.2 Estilo para SVGs Inline (RPA/Automatización) */
+    .ticker-content svg {
+        width: 2.5rem; /* Tamaño base para SVGs */
+        height: 2.5rem;
+        color: #666; /* Gris base */
+        fill: currentColor; /* Importante: obliga al SVG a usar el color del texto */
+    }
+
+    /* EFECTO MASTER: Forzar el color rosa en hover para TODOS los SVGs */
+    .ticker-content svg:hover {
+        color: #da62c4 !important; /* Fuerza el color fucsia */
+        fill: #da62c4 !important;  /* Fuerza el relleno fucsia */
+        transform: scale(1.1);
+    }
+
+    /* 4.3 Ajustes de Tamaño Específicos (Nivelación Visual) */
+    
+    /* Appian suele verse pequeño, lo agrandamos */
+    .ticker-content svg.icon-appian {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    /* Blue Prism suele verse muy pequeño, lo agrandamos más */
+    .ticker-content svg.icon-blueprism {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    /* n8n y UiPath suelen estar bien, pero aseguramos tamaño */
+    .ticker-content svg.icon-uipath,
+    .ticker-content svg.icon-n8n {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+	/* Estilo base para tus SVGs locales */
+    .local-icon {
+        margin: 0 2.5rem;
+        background-color: #666; /* Color gris inicial */
+        /* Esta es la magia: usamos el SVG como máscara */
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-position: center;
+        mask-position: center;
+        
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        flex-shrink: 0;
+    }
+
+    /* Asignamos cada archivo a su máscara */
+    .icon-uipath { -webkit-mask-image: url('/icons/uipath.svg'); mask-image: url('/icons/uipath.svg'); width: 2.8rem; height: 2.8rem; }
+    .icon-appian { -webkit-mask-image: url('/icons/appian.svg'); mask-image: url('/icons/appian.svg'); width: 3.5rem; height: 3.5rem; }
+    .icon-blueprism { -webkit-mask-image: url('/icons/blueprism.svg'); mask-image: url('/icons/blueprism.svg'); width: 4rem; height: 4rem; }
+    .icon-n8n { -webkit-mask-image: url('/icons/n8n.svg'); mask-image: url('/icons/n8n.svg'); width: 2.8rem; height: 2.8rem; }
+
+    /* EFECTO HOVER: Aquí cambiamos el fondo de la máscara al color rosa */
+    .local-icon:hover {
+        background-color: #da62c4 !important; /* El rosa de tu marca */
+        transform: scale(1.1);
+    }
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
 
 	/* 5. Grids y Tarjetas Generales */
 	.expertise-grid {
