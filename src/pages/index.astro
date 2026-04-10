@@ -1,24 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
 // Definimos el stack tecnológico una sola vez
+
 const techStack = [
-    { type: "devicon", icon: "devicon-python-plain colored" },
-    { type: "devicon", icon: "devicon-googlecloud-plain colored" },
-    { type: "img", src: "/icons/uipath.svg", alt: "UiPath" },
-    { type: "img", src: "/icons/appian.svg", alt: "Appian", css: "icon-wide" },
-    { type: "img", src: "/icons/blueprism.svg", alt: "Blue Prism", css: "icon-extra-wide" },
-    { type: "img", src: "https://cdn.simpleicons.org/n8n/FF6666", alt: "n8n" },
-    { type: "img", src: "/icons/pa.svg", alt: "Power Automate" },
-    { type: "devicon", icon: "devicon-docker-plain colored" },
+    // --- LENGUAJE Y ANÁLISIS  ---
+    { type: "img", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg", alt: "python" },
+    { type: "devicon", icon: "devicon-pandas-plain colored" },
+    { type: "devicon", icon: "devicon-dot-net-plain colored" },
+
+    // --- INTELIGENCIA ARTIFICIAL & SCRAPING  ---
+   { type: "img", src: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-gemini.svg", alt: "gemini" },
+    { type: "img", src: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai-light.svg", alt: "openai" },
     { type: "devicon", icon: "devicon-playwright-plain colored" },
-    { type: "devicon", icon: "devicon-azuresqldatabase-plain colored" },
+   { type: "img", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg", alt: "streamlit" },
+   
+    // --- ECOSISTEMA RPA & LOW-CODE  ---
+    { type: "img", src: "/icons/uipath.svg", alt: "UiPath" },
+    { type: "img", src: "/icons/blueprism.svg", alt: "Blue Prism", css: "icon-extra-wide" },
+    { type: "img", src: "/icons/appian.svg", alt: "Appian", css: "icon-wide" },
+    { type: "img", src: "/icons/pa.svg", alt: "Power Automate" },
+     { type: "img", src: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/n8n.svg", alt: "n8n" },
+
+    // --- INFRAESTRUCTURA Y DEVOPS ---
+    { type: "devicon", icon: "devicon-googlecloud-plain colored" },
     { type: "devicon", icon: "devicon-azure-plain colored" },
-    { type: "img", src: "https://cdn.simpleicons.org/github/181717", alt: "github" },
+    { type: "devicon", icon: "devicon-docker-plain colored" },
     { type: "devicon", icon: "devicon-git-plain colored" },
-    { type: "devicon", icon: "devicon-dot-net-plain colored" }
+   { type: "img", src: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/github-light.svg", alt: "github" },
+
+    // --- GESTIÓN Y DATOS  ---
+    { type: "devicon", icon: "devicon-jira-plain colored" },
+    { type: "devicon", icon: "devicon-azuresqldatabase-plain colored" },
+    { type: "devicon", icon: "devicon-postgresql-plain colored" }
 ];
+         
 
 const certificaciones = [
+    // --- BLOQUE 1: Arquitectura y Estrategia ---
     {
         tipoTarjeta: "gold",
         tipoIcono: "fa",
@@ -27,7 +45,7 @@ const certificaciones = [
         badge: "Oficial / Verificada",
         titulo: "Ingeniero de Portafolios",
         url: "https://www.credential.net/f65c814b-6e87-4616-bebd-be26140cb679",
-        descripcion: "Tecnológico de Monterrey | 85 Hrs"
+        descripcion: "Tecnológico de Monterrey | 85 Hrs",
     },
     {
         tipoTarjeta: "gold",
@@ -37,8 +55,49 @@ const certificaciones = [
         badge: "Oficial / Verificada",
         titulo: "Blue Prism Certified Developer",
         url: "https://www.credly.com/earner/earned/badge/d23392fe-8ee6-4604-a9a4-90434722d933",
-        descripcion: "SS&C Blue Prism | Certificación de Arquitectura RPA"
+        descripcion: "SS&C Blue Prism | Certificación de Arquitectura RPA",
     },
+    {
+        tipoTarjeta: "tech",
+        tipoIcono: "devicon",
+        icono: "devicon-redhat-plain colored",
+        badge: "Especialización",
+        titulo: "Red Hat OpenShift Training",
+        url: null,
+        descripcion: "Red Hat | Contenedores y Kubernetes",
+    },
+
+    // --- BLOQUE 2: Código Puro, Datos & IA ---
+    {
+        tipoTarjeta: "tech",
+        tipoIcono: "fa",
+        icono: "fa-solid fa-brain",
+        estiloIcono: "font-size: 1.8rem; color: #8E75B2;", 
+        badge: "Especialización",
+        titulo: "Integración GenAI & LLMs",
+        url: null,
+        descripcion: "Google Gemini API, Prompt Engineering y Automatización Cognitiva",
+    },
+    {
+        tipoTarjeta: "tech",
+        tipoIcono: "devicon",
+        icono: "devicon-python-plain colored",
+        badge: "Especialización",
+        titulo: "Python RPA & Scraping Avanzado",
+        url: null,
+        descripcion: "Playwright, BeautifulSoup, Regex y Automatización Headless",
+    },
+    {
+        tipoTarjeta: "tech",
+        tipoIcono: "img",
+        icono: "/icons/dflatam.png",
+        badge: "Curso",
+        titulo: "Análisis de Datos con Python",
+        url: null,
+        descripcion: "Desafío Latam | Oct 2025",
+    },
+
+    // --- BLOQUE 3: Ecosistema Low-Code / RPA Tradicional ---
     {
         tipoTarjeta: "academy",
         tipoIcono: "img",
@@ -46,8 +105,8 @@ const certificaciones = [
         claseImagen: "local-icon-appian",
         badge: "Academy 2026",
         titulo: "Appian Developer",
-        url: null, // No tiene URL
-        descripcion: "Appian Academy | Low-Code Automation"
+        url: null, 
+        descripcion: "Appian Academy | Low-Code Automation",
     },
     {
         tipoTarjeta: "academy",
@@ -57,25 +116,7 @@ const certificaciones = [
         badge: "Academy",
         titulo: "RPA Developer Foundation",
         url: null,
-        descripcion: "UiPath Academy | EY Consulting"
-    },
-    {
-        tipoTarjeta: "tech",
-        tipoIcono: "devicon",
-        icono: "devicon-python-plain colored",
-        badge: "Curso",
-        titulo: "Análisis de Datos con Python",
-        url: null,
-        descripcion: "Desafío Latam | Oct 2025"
-    },
-    {
-        tipoTarjeta: "tech",
-        tipoIcono: "devicon",
-        icono: "devicon-redhat-plain colored",
-        badge: "Especialización",
-        titulo: "Red Hat OpenShift Training",
-        url: null,
-        descripcion: "Red Hat | Contenedores y Kubernetes"
+        descripcion: "UiPath Academy | EY Consulting",
     },
     {
         tipoTarjeta: "tech",
@@ -85,7 +126,7 @@ const certificaciones = [
         badge: "Formación",
         titulo: "Power Automate Desktop / Cloud",
         url: null,
-        descripcion: "Udemy | Curso Completo RPA"
+        descripcion: "Udemy | Curso Completo RPA",
     }
 ];
 
@@ -160,10 +201,10 @@ const repositorios = [
                 </div>
 	        </div>
 			<div class="description">
-                Ingeniero Informático con un perfil híbrido que combina la ejecución técnica avanzada con la visión estratégica de la <strong>Gestión de Portafolios (VDD)</strong>. 
-                Traduzco requerimientos operativos complejos en soluciones de software de alto impacto bajo el modelo <strong>Robot as a Service (RaaS)</strong>. 
-                Mi enfoque va más allá de la automatización tradicional: desarrollo <strong>microservicios y APIs (Python/Flask)</strong>, diseño <strong>arquitecturas escalables (GCP, Serverless)</strong> e integro <strong>IA Generativa (GenAI)</strong> para llevar la eficiencia operativa y el retorno de inversión al siguiente nivel.
-            </div>
+        Ingeniero Informático con un perfil híbrido que combina la ejecución técnica avanzada con la visión estratégica de la <strong>Gestión de Portafolios (VDD)</strong>. 
+        Traduzco requerimientos operativos complejos en soluciones de software de alto impacto bajo el modelo <strong>Robot as a Service (RaaS)</strong>. 
+        Mi enfoque va más allá de la automatización tradicional: diseño <strong>arquitecturas escalables (Docker, GCP)</strong>, desarrollo motores de <strong>Web Scraping avanzado</strong> e integro <strong>IA Generativa (Gemini/LLMs)</strong> para orquestar flujos de trabajo autónomos que elevan la eficiencia y el retorno de inversión corporativo.
+    </div>
 			
 			<div class="tech-ticker">
                 <div class="ticker-content">
@@ -180,39 +221,35 @@ const repositorios = [
 
 		</section>
 
-	    <section id="expertise">
-            <h2>Core Expertise y Stack</h2>
-            <div class="expertise-grid">
-                <div class="skill-item">
-                    <i class="devicon-googlecloud-plain colored"></i>
-                    <span><strong>Cloud & Arquitectura:</strong> GCP (Cloud Run, Secret Manager), Microservicios (RaaS), Integración de APIs (REST/SOAP).</span>
-                </div>
-                <div class="skill-item">
-                    <i class="devicon-python-plain colored"></i>
-                    <span><strong>Automatización & IA:</strong> Python, Playwright, Appian, n8n, UiPath, Power Automate. Procesamiento inteligente de documentos (OCR/NLP).</span>
-                </div>
-                <div class="skill-item">
-                    <i class="devicon-jira-plain colored"></i>
-                    <span><strong>Gestión, DevOps & Agilidad:</strong> CI/CD, Git (GitHub/GitLab), Ciclo de vida del software (SDLC), Scrum y PMBOK.</span>
-                </div>
-            </div>
-        </section>
+	 <section id="expertise">
+    <h2>Core Expertise y Stack</h2>
+    <div class="expertise-grid">
+        <div class="skill-item">
+            <i class="devicon-googlecloud-plain colored"></i>
+            <span><strong>Cloud, Arquitectura & UI:</strong> GCP (Cloud Run, Secret Manager), Docker, Microservicios (RaaS). Integración de APIs (REST/SOAP) y desarrollo de interfaces interactivas con Streamlit.</span>
+        </div>
+        <div class="skill-item">
+            <i class="devicon-python-plain colored"></i>
+            <span><strong>Automatización, IA & Scraping:</strong> Python, Playwright, BeautifulSoup, Pandas. Integración de IA Generativa (Google Gemini, OpenAI). Frameworks RPA empresariales (Appian, UiPath, Power Automate, n8n).</span>
+        </div>
+        <div class="skill-item">
+            <i class="devicon-jira-plain colored"></i>
+            <span><strong>Gestión, DevOps & Agilidad:</strong> CI/CD, Git (GitHub/GitLab), Testing (Mocking), Ciclo de vida del software (SDLC), Scrum y PMBOK.</span>
+        </div>
+    </div>
+</section>
 
-		<section id="raas-architecture">
-			<div class="raas-container">
-				<div class="raas-badge">Core Expertise</div>
-				<h2>Arquitectura RaaS (Robot as a Service)</h2>
-				<p>
-					Diseño de microservicios transaccionales bajo modelo <strong
-						>RaaS</strong
-					>, utilizando
-					<strong>Python</strong> y <strong>Playwright</strong>.
-					Desplegados sobre infraestructura serverless en <strong
-						>Google Cloud Platform (GCP - Cloud Run)</strong
-					> para garantizar alta disponibilidad y escalabilidad masiva.
-				</p>
-			</div>
-		</section>
+	<section id="raas-architecture">
+    <div class="raas-container">
+        <div class="raas-badge">Core Expertise</div>
+        <h2>Arquitectura RaaS (Robot as a Service)</h2>
+        <p>
+            Diseño microservicios transaccionales bajo el modelo <strong>RaaS</strong>, utilizando 
+            <strong>Python</strong>, <strong>Playwright</strong> y la API de <strong>Google Gemini</strong>. 
+            Estas soluciones autónomas se integran fluidamente con bases de datos y Google Workspace, siendo desplegadas sobre infraestructura serverless en <strong>Google Cloud Platform (Cloud Run)</strong> para garantizar alta disponibilidad y escalabilidad masiva.
+        </p>
+    </div>
+</section>
 
 		<section id="proyectos">
             <h2>Experiencia de Alto Impacto</h2>
@@ -246,39 +283,42 @@ const repositorios = [
         </section>
 
 		<section id="vdd-strategy">
-			<h2>Estrategia VDD (Value Driven Delivery)</h2>
-			<p style="color: #a3a3a3; margin-bottom: 1.5rem;">
-				No automatizo a ciegas. Aseguro la alineación con los objetivos del negocio mediante la gestión de stakeholders y la priorización de backlogs utilizando modelos matemáticos de eficiencia:
-			</p>
-			<div class="vdd-table-container">
-				<table>
-					<thead>
-						<tr>
-							<th>Modelo</th>
-							<th>Aplicación</th>
-							<th>Meta</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><strong>WSJF</strong></td>
-							<td>Costo del retraso</td>
-							<td>Agilidad Financiera</td>
-						</tr>
-						<tr>
-							<td><strong>RICE / ICE</strong></td>
-							<td>Impacto vs Esfuerzo</td>
-							<td>ROI de Automatización</td>
-						</tr>
-						<tr>
-							<td><strong>MoSCoW</strong></td>
-							<td>Clasificación Crítica</td>
-							<td>Cumplimiento de Plazos</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</section>
+    <h2>Estrategia VDD (Value Driven Delivery)</h2>
+    <p style="color: #a3a3a3; margin-bottom: 1.5rem;">
+        No automatizo a ciegas. Aseguro la alineación con los objetivos
+        del negocio mediante la gestión de stakeholders y la
+        priorización de backlogs utilizando modelos matemáticos de
+        eficiencia, impulsando el ROI mediante integraciones GenAI:
+    </p>
+    <div class="vdd-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Aplicación</th>
+                    <th>Meta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>WSJF</strong></td>
+                    <td>Costo del retraso</td>
+                    <td>Agilidad Financiera</td>
+                </tr>
+                <tr>
+                    <td><strong>RICE / ICE</strong></td>
+                    <td>Impacto vs Esfuerzo</td>
+                    <td>ROI de Automatización</td>
+                </tr>
+                <tr>
+                    <td><strong>MoSCoW</strong></td>
+                    <td>Clasificación Crítica</td>
+                    <td>Cumplimiento de Plazos</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
 
 		<section id="certificaciones">
     <h2>Certificaciones y Especialización</h2>
@@ -637,7 +677,7 @@ const repositorios = [
     .ticker-content i:hover,
     .ticker-content .local-icon:hover {
         filter: grayscale(0%) brightness(1); /* Color real y brillo normal */
-        transform: scale(1.15);
+        transform: scale(1.3);
     }
 
     /* Ajuste para los iconos de fuente de Devicon */
