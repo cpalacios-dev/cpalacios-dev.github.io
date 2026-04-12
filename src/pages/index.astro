@@ -4,36 +4,64 @@ import Layout from "../layouts/Layout.astro";
 
 const techStack = [
     // --- LENGUAJE Y ANÁLISIS  ---
-    { type: "img", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg", alt: "python" },
+    {
+        type: "img",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        alt: "python",
+    },
     { type: "devicon", icon: "devicon-pandas-plain colored" },
     { type: "devicon", icon: "devicon-dot-net-plain colored" },
 
     // --- INTELIGENCIA ARTIFICIAL & SCRAPING  ---
-   { type: "img", src: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-gemini.svg", alt: "gemini" },
-    { type: "img", src: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai-light.svg", alt: "openai" },
+    {
+        type: "img",
+        src: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-gemini.svg",
+        alt: "gemini",
+    },
+    {
+        type: "img",
+        src: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai-light.svg",
+        alt: "openai",
+    },
     { type: "devicon", icon: "devicon-playwright-plain colored" },
-   { type: "img", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg", alt: "streamlit" },
-   
+    {
+        type: "img",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg",
+        alt: "streamlit",
+    },
+
     // --- ECOSISTEMA RPA & LOW-CODE  ---
     { type: "img", src: "/icons/uipath.svg", alt: "UiPath" },
-    { type: "img", src: "/icons/blueprism.svg", alt: "Blue Prism", css: "icon-extra-wide" },
+    {
+        type: "img",
+        src: "/icons/blueprism.svg",
+        alt: "Blue Prism",
+        css: "icon-extra-wide",
+    },
     { type: "img", src: "/icons/appian.svg", alt: "Appian", css: "icon-wide" },
     { type: "img", src: "/icons/pa.svg", alt: "Power Automate" },
-     { type: "img", src: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/n8n.svg", alt: "n8n" },
+    {
+        type: "img",
+        src: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/n8n.svg",
+        alt: "n8n",
+    },
 
     // --- INFRAESTRUCTURA Y DEVOPS ---
     { type: "devicon", icon: "devicon-googlecloud-plain colored" },
     { type: "devicon", icon: "devicon-azure-plain colored" },
     { type: "devicon", icon: "devicon-docker-plain colored" },
     { type: "devicon", icon: "devicon-git-plain colored" },
-   { type: "img", src: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/github-light.svg", alt: "github" },
+    {
+        type: "img",
+        src: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/github-light.svg",
+        alt: "github",
+    },
 
     // --- GESTIÓN Y DATOS  ---
     { type: "devicon", icon: "devicon-jira-plain colored" },
     { type: "devicon", icon: "devicon-azuresqldatabase-plain colored" },
-    { type: "devicon", icon: "devicon-postgresql-plain colored" }
+    { type: "devicon", icon: "devicon-postgresql-plain colored" },
 ];
-         
 
 const certificaciones = [
     // --- BLOQUE 1: Arquitectura y Estrategia ---
@@ -72,11 +100,12 @@ const certificaciones = [
         tipoTarjeta: "tech",
         tipoIcono: "fa",
         icono: "fa-solid fa-brain",
-        estiloIcono: "font-size: 1.8rem; color: #8E75B2;", 
+        estiloIcono: "font-size: 1.8rem; color: #8E75B2;",
         badge: "Especialización",
         titulo: "Integración GenAI & LLMs",
         url: null,
-        descripcion: "Google Gemini API, Prompt Engineering y Automatización Cognitiva",
+        descripcion:
+            "Google Gemini API, Prompt Engineering y Automatización Cognitiva",
     },
     {
         tipoTarjeta: "tech",
@@ -85,7 +114,8 @@ const certificaciones = [
         badge: "Especialización",
         titulo: "Python RPA & Scraping Avanzado",
         url: null,
-        descripcion: "Playwright, BeautifulSoup, Regex y Automatización Headless",
+        descripcion:
+            "Playwright, BeautifulSoup, Regex y Automatización Headless",
     },
     {
         tipoTarjeta: "tech",
@@ -105,7 +135,7 @@ const certificaciones = [
         claseImagen: "local-icon-appian",
         badge: "Academy 2026",
         titulo: "Appian Developer",
-        url: null, 
+        url: null,
         descripcion: "Appian Academy | Low-Code Automation",
     },
     {
@@ -127,7 +157,7 @@ const certificaciones = [
         titulo: "Power Automate Desktop / Cloud",
         url: null,
         descripcion: "Udemy | Curso Completo RPA",
-    }
+    },
 ];
 
 // Definimos los repositorios en un arreglo
@@ -135,44 +165,65 @@ const repositorios = [
     {
         titulo: "RaaS Automation: Previred",
         url: "https://github.com/cpalacios-dev/raas-previred-automation-core",
-        descripcion: "API REST (Flask/Waitress) para extracción y centralización de indicadores previsionales. Implementa arquitectura RaaS v2.0, integrando <strong>Playwright</strong> y <strong>BS4</strong> para scraping, <strong>Pandas</strong> para ETL, almacenamiento en GCS y alertas vía SendGrid.",
-        tags: ["Flask", "Playwright", "Pandas", "GCP Storage", "SendGrid", "Pydantic"]
+        descripcion:
+            "API REST (Flask/Waitress) para extracción y centralización de indicadores previsionales. Implementa arquitectura RaaS v2.0, integrando <strong>Playwright</strong> y <strong>BS4</strong> para scraping, <strong>Pandas</strong> para ETL, almacenamiento en GCS y alertas vía SendGrid.",
+        tags: [
+            "Flask",
+            "Playwright",
+            "Pandas",
+            "GCP Storage",
+            "SendGrid",
+            "Pydantic",
+        ],
     },
     {
         titulo: "IDP Smart Extractor (GenAI)",
         url: "https://github.com/cpalacios-dev/idp-smart-extractor-service",
-        descripcion: "Servicio de procesamiento inteligente de documentos (IDP). Utiliza el modelo <strong>Gemini 3 Flash</strong> para transformar archivos PDF caóticos en datos estructurados JSON listos para sistemas ERP.",
-        tags: ["Gemini 3 Flash", "Flask", "PyPDF", "Pydantic"]
+        descripcion:
+            "Servicio de procesamiento inteligente de documentos (IDP). Utiliza el modelo <strong>Gemini 3 Flash</strong> para transformar archivos PDF caóticos en datos estructurados JSON listos para sistemas ERP.",
+        tags: ["Gemini 3 Flash", "Flask", "PyPDF", "Pydantic"],
     },
     {
         titulo: "Economic Data Scraper",
         url: "https://github.com/cpalacios-dev/economic-data-ingestion-scraper",
-        descripcion: "Microservicio serverless diseñado para extracción, limpieza y estructuración de datos económicos chilenos. Preparado bajo principios POO para despliegue en GCP Cloud Run o AWS Lambda.",
-        tags: ["Python", "Requests", "Logging", "JSON"]
+        descripcion:
+            "Microservicio serverless diseñado para extracción, limpieza y estructuración de datos económicos chilenos. Preparado bajo principios POO para despliegue en GCP Cloud Run o AWS Lambda.",
+        tags: ["Python", "Requests", "Logging", "JSON"],
     },
     {
         titulo: "WhatsApp AI Automation Bot",
         url: "https://github.com/cpalacios-dev/whatsapp-ai-assistant",
-        descripcion: "Sistema integral RPA que combina Web Scraping adaptativo, Inteligencia Artificial (Gemini 2.5) y automatización de navegador headless para redactar y enviar mensajes personalizados por WhatsApp, sincronizado bidireccionalmente con Google Sheets.",
-        tags: ["Python", "Playwright", "Gemini AI", "Streamlit", "Web Scraping"]
-    }
-	
+        descripcion:
+            "Sistema integral RPA que combina Web Scraping adaptativo, Inteligencia Artificial (Gemini 2.5) y automatización de navegador headless para redactar y enviar mensajes personalizados por WhatsApp, sincronizado bidireccionalmente con Google Sheets.",
+        tags: [
+            "Python",
+            "Playwright",
+            "Gemini AI",
+            "Streamlit",
+            "Web Scraping",
+        ],
+    },
 ];
-
-
 ---
 
-<Layout title="Cristian Palacios | Portfolio Engineer & RPA Developer">
-	<main>
-		<section id="hero" class="hero-section">
-			<div class="hero-image-container">
-                <img src="/perfil.png" alt="Cristian Palacios" class="hero-profile-photo" />
+<Layout
+    title="Cristian Palacios | Ingeniero de Portafolios TI | Desarrollador RPA, Cloud & GenAI"
+>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-image-container">
+                <img
+                    src="/perfil.png"
+                    alt="Cristian Palacios"
+                    class="hero-profile-photo"
+                />
             </div>
-            
+
             <div class="hero-text-content">
-                <h1>Cristian Palacios</h1>
+                <h1>Cristian Palacios B.</h1>
                 <p class="role">
-                    Ingeniero de Portafolios TI | Desarrollador RPA, Cloud & GenAI
+                    Ingeniero de Portafolios TI | Desarrollador RPA, Cloud &
+                    GenAI
                 </p>
                 <div class="status-badge">
                     <span class="dot"></span> Disponible para nuevos desafíos
@@ -199,59 +250,96 @@ const repositorios = [
                         <i class="devicon-google-plain"></i>
                     </a>
                 </div>
-	        </div>
-			<div class="description">
-        Ingeniero Informático con un perfil híbrido que combina la ejecución técnica avanzada con la visión estratégica de la <strong>Gestión de Portafolios (VDD)</strong>. 
-        Traduzco requerimientos operativos complejos en soluciones de software de alto impacto bajo el modelo <strong>Robot as a Service (RaaS)</strong>. 
-        Mi enfoque va más allá de la automatización tradicional: diseño <strong>arquitecturas escalables (Docker, GCP)</strong>, desarrollo motores de <strong>Web Scraping avanzado</strong> e integro <strong>IA Generativa (Gemini/LLMs)</strong> para orquestar flujos de trabajo autónomos que elevan la eficiencia y el retorno de inversión corporativo.
-    </div>
-			
-			<div class="tech-ticker">
-                <div class="ticker-content">
-                    {/* Unimos el arreglo consigo mismo [...techStack, ...techStack] para duplicarlo automáticamente */}
-                    {[...techStack, ...techStack].map((tech) => (
-                        tech.type === "devicon" ? (
-                            <i class={tech.icon}></i>
-                        ) : (
-                            <img src={tech.src} class={`local-icon ${tech.css || ""}`} alt={tech.alt} />
-                        )
-                    ))}
-                </div>
+            </div>
+            <div class="description">
+                Ingeniero Informático con un perfil híbrido que combina la
+                ejecución técnica avanzada con la visión estratégica de la <strong
+                    >Gestión de Portafolios (VDD)</strong
+                >. Traduzco requerimientos operativos complejos en soluciones de
+                software de alto impacto bajo el modelo <strong
+                    >Robot as a Service (RaaS)</strong
+                >. Mi enfoque va más allá de la automatización tradicional:
+                diseño <strong>arquitecturas escalables (Docker, GCP)</strong>,
+                desarrollo motores de <strong>Web Scraping avanzado</strong> e integro
+                <strong>IA Generativa (Gemini/LLMs)</strong> para orquestar flujos
+                de trabajo autónomos que elevan la eficiencia y el retorno de inversión
+                corporativo.
             </div>
 
-		</section>
+            <div class="tech-ticker">
+                <div class="ticker-content">
+                    {
+                        /* Unimos el arreglo consigo mismo [...techStack, ...techStack] para duplicarlo automáticamente */
+                    }
+                    {
+                        [...techStack, ...techStack].map((tech) =>
+                            tech.type === "devicon" ? (
+                                <i class={tech.icon} />
+                            ) : (
+                                <img
+                                    src={tech.src}
+                                    class={`local-icon ${tech.css || ""}`}
+                                    alt={tech.alt}
+                                />
+                            ),
+                        )
+                    }
+                </div>
+            </div>
+        </section>
 
-	 <section id="expertise">
-    <h2>Core Expertise y Stack</h2>
-    <div class="expertise-grid">
-        <div class="skill-item">
-            <i class="devicon-googlecloud-plain colored"></i>
-            <span><strong>Cloud, Arquitectura & UI:</strong> GCP (Cloud Run, Secret Manager), Docker, Microservicios (RaaS). Integración de APIs (REST/SOAP) y desarrollo de interfaces interactivas con Streamlit.</span>
-        </div>
-        <div class="skill-item">
-            <i class="devicon-python-plain colored"></i>
-            <span><strong>Automatización, IA & Scraping:</strong> Python, Playwright, BeautifulSoup, Pandas. Integración de IA Generativa (Google Gemini, OpenAI). Frameworks RPA empresariales (Appian, UiPath, Power Automate, n8n).</span>
-        </div>
-        <div class="skill-item">
-            <i class="devicon-jira-plain colored"></i>
-            <span><strong>Gestión, DevOps & Agilidad:</strong> CI/CD, Git (GitHub/GitLab), Testing (Mocking), Ciclo de vida del software (SDLC), Scrum y PMBOK.</span>
-        </div>
-    </div>
-</section>
+        <section id="expertise">
+            <h2>Core Expertise y Stack</h2>
+            <div class="expertise-grid">
+                <div class="skill-item">
+                    <i class="devicon-googlecloud-plain colored"></i>
+                    <span
+                        ><strong>Cloud, Arquitectura & UI:</strong> GCP (Cloud Run,
+                        Secret Manager), Docker, Microservicios (RaaS). Integración
+                        de APIs (REST/SOAP) y desarrollo de interfaces interactivas
+                        con Streamlit.</span
+                    >
+                </div>
+                <div class="skill-item">
+                    <i class="devicon-python-plain colored"></i>
+                    <span
+                        ><strong>Automatización, IA & Scraping:</strong> Python, Playwright,
+                        BeautifulSoup, Pandas. Integración de IA Generativa (Google
+                        Gemini, OpenAI). Frameworks RPA empresariales (Appian, UiPath,
+                        Power Automate, n8n).</span
+                    >
+                </div>
+                <div class="skill-item">
+                    <i class="devicon-jira-plain colored"></i>
+                    <span
+                        ><strong>Gestión, DevOps & Agilidad:</strong> CI/CD, Git (GitHub/GitLab),
+                        Testing (Mocking), Ciclo de vida del software (SDLC), Scrum
+                        y PMBOK.</span
+                    >
+                </div>
+            </div>
+        </section>
 
-	<section id="raas-architecture">
-    <div class="raas-container">
-        <div class="raas-badge">Core Expertise</div>
-        <h2>Arquitectura RaaS (Robot as a Service)</h2>
-        <p>
-            Diseño microservicios transaccionales bajo el modelo <strong>RaaS</strong>, utilizando 
-            <strong>Python</strong>, <strong>Playwright</strong> y la API de <strong>Google Gemini</strong>. 
-            Estas soluciones autónomas se integran fluidamente con bases de datos y Google Workspace, siendo desplegadas sobre infraestructura serverless en <strong>Google Cloud Platform (Cloud Run)</strong> para garantizar alta disponibilidad y escalabilidad masiva.
-        </p>
-    </div>
-</section>
+        <section id="raas-architecture">
+            <div class="raas-container">
+                <div class="raas-badge">Core Expertise</div>
+                <h2>Arquitectura RaaS (Robot as a Service)</h2>
+                <p>
+                    Diseño microservicios transaccionales bajo el modelo <strong
+                        >RaaS</strong
+                    >, utilizando
+                    <strong>Python</strong>, <strong>Playwright</strong> y la API
+                    de <strong>Google Gemini</strong>. Estas soluciones
+                    autónomas se integran fluidamente con bases de datos y
+                    Google Workspace, siendo desplegadas sobre infraestructura
+                    serverless en <strong
+                        >Google Cloud Platform (Cloud Run)</strong
+                    > para garantizar alta disponibilidad y escalabilidad masiva.
+                </p>
+            </div>
+        </section>
 
-		<section id="proyectos">
+        <section id="proyectos">
             <h2>Experiencia de Alto Impacto</h2>
             <div class="project-grid">
                 <article class="project-card">
@@ -260,10 +348,16 @@ const repositorios = [
                         <h3>Modelo Robot as a Service (RaaS)</h3>
                     </header>
                     <p>
-                        Desarrollo de microservicios transaccionales en <strong>Cloud Run</strong> e integración de <strong>IA (OCR/NLP)</strong> para la gestión automatizada de nóminas críticas, reduciendo drásticamente la carga operativa manual.
+                        Desarrollo de microservicios transaccionales en <strong
+                            >Cloud Run</strong
+                        > e integración de <strong>IA (OCR/NLP)</strong> para la gestión
+                        automatizada de nóminas críticas, reduciendo drásticamente
+                        la carga operativa manual.
                     </p>
                     <div class="tags">
-                        <span>GCP</span><span>Python</span><span>Playwright</span><span>OCR/NLP</span>
+                        <span>GCP</span><span>Python</span><span
+                            >Playwright</span
+                        ><span>OCR/NLP</span>
                     </div>
                 </article>
 
@@ -273,105 +367,152 @@ const repositorios = [
                         <h3>Modernización e Integración API</h3>
                     </header>
                     <p>
-                        Liderazgo técnico en la integración de sistemas legacy del sector telecomunicaciones mediante <strong>APIs REST/SOAP</strong>, asegurando la escalabilidad y mejorando la interoperabilidad corporativa.
+                        Liderazgo técnico en la integración de sistemas legacy
+                        del sector telecomunicaciones mediante <strong
+                            >APIs REST/SOAP</strong
+                        >, asegurando la escalabilidad y mejorando la
+                        interoperabilidad corporativa.
                     </p>
                     <div class="tags">
-                        <span>APIs</span><span>Arquitectura</span><span>SDLC</span>
+                        <span>APIs</span><span>Arquitectura</span><span
+                            >SDLC</span
+                        >
                     </div>
                 </article>
             </div>
         </section>
 
-		<section id="vdd-strategy">
-    <h2>Estrategia VDD (Value Driven Delivery)</h2>
-    <p style="color: #a3a3a3; margin-bottom: 1.5rem;">
-        No automatizo a ciegas. Aseguro la alineación con los objetivos
-        del negocio mediante la gestión de stakeholders y la
-        priorización de backlogs utilizando modelos matemáticos de
-        eficiencia, impulsando el ROI mediante integraciones GenAI:
-    </p>
-    <div class="vdd-table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Modelo</th>
-                    <th>Aplicación</th>
-                    <th>Meta</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>WSJF</strong></td>
-                    <td>Costo del retraso</td>
-                    <td>Agilidad Financiera</td>
-                </tr>
-                <tr>
-                    <td><strong>RICE / ICE</strong></td>
-                    <td>Impacto vs Esfuerzo</td>
-                    <td>ROI de Automatización</td>
-                </tr>
-                <tr>
-                    <td><strong>MoSCoW</strong></td>
-                    <td>Clasificación Crítica</td>
-                    <td>Cumplimiento de Plazos</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
-
-		<section id="certificaciones">
-    <h2>Certificaciones y Especialización</h2>
-    <div class="cert-grid">
-        {certificaciones.map((cert) => (
-            <div class={`cert-card ${cert.tipoTarjeta}`}>
-                <div class="cert-header">
-                    {/* Renderizado condicional del icono según el tipo */}
-                    {cert.tipoIcono === "img" ? (
-                        <img src={cert.icono} class={cert.claseImagen} alt={cert.titulo} />
-                    ) : cert.tipoIcono === "fa" ? (
-                        <i class={cert.icono} style={cert.estiloIcono}></i>
-                    ) : (
-                        <i class={cert.icono}></i>
-                    )}
-                    <span>{cert.badge}</span>
-                </div>
-                
-                {/* Si tiene URL, dibuja el enlace con el iconito. Si no, solo dibuja el texto */}
-                {cert.url ? (
-                    <h4 style="display: flex; align-items: center; gap: 6px;">
-                        <a href={cert.url} target="_blank" style="color: inherit; text-decoration: none;" title="Ver credencial oficial">
-                            {cert.titulo}
-                            <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: #BC52EE;"></i>
-                        </a>
-                    </h4>
-                ) : (
-                    <h4>{cert.titulo}</h4>
-                )}
-                
-                <p>{cert.descripcion}</p>
+        <section id="vdd-strategy">
+            <h2>Estrategia VDD (Value Driven Delivery)</h2>
+            <p style="color: #a3a3a3; margin-bottom: 1.5rem;">
+                No automatizo a ciegas. Aseguro la alineación con los objetivos
+                del negocio mediante la gestión de stakeholders y la
+                priorización de backlogs utilizando modelos matemáticos de
+                eficiencia, impulsando el ROI mediante integraciones GenAI:
+            </p>
+            <div class="vdd-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Aplicación</th>
+                            <th>Meta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>WSJF</strong></td>
+                            <td>Costo del retraso</td>
+                            <td>Agilidad Financiera</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RICE / ICE</strong></td>
+                            <td>Impacto vs Esfuerzo</td>
+                            <td>ROI de Automatización</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MoSCoW</strong></td>
+                            <td>Clasificación Crítica</td>
+                            <td>Cumplimiento de Plazos</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        ))}
-    </div>
-</section>
+        </section>
 
-		<section id="trayectoria">
+        <section id="certificaciones">
+            <h2>Certificaciones y Especialización</h2>
+            <div class="cert-grid">
+                {
+                    certificaciones.map((cert) => (
+                        <div class={`cert-card ${cert.tipoTarjeta}`}>
+                            <div class="cert-header">
+                                {/* Renderizado condicional del icono según el tipo */}
+                                {cert.tipoIcono === "img" ? (
+                                    <img
+                                        src={cert.icono}
+                                        class={cert.claseImagen}
+                                        alt={cert.titulo}
+                                    />
+                                ) : cert.tipoIcono === "fa" ? (
+                                    <i
+                                        class={cert.icono}
+                                        style={cert.estiloIcono}
+                                    />
+                                ) : (
+                                    <i class={cert.icono} />
+                                )}
+                                <span>{cert.badge}</span>
+                            </div>
+
+                            {/* Si tiene URL, dibuja el enlace con el iconito. Si no, solo dibuja el texto */}
+                            {cert.url ? (
+                                <h4 style="display: flex; align-items: center; gap: 6px;">
+                                    <a
+                                        href={cert.url}
+                                        target="_blank"
+                                        style="color: inherit; text-decoration: none;"
+                                        title="Ver credencial oficial"
+                                    >
+                                        {cert.titulo}
+                                        <i
+                                            class="fa-solid fa-arrow-up-right-from-square"
+                                            style="font-size: 0.8rem; color: #BC52EE;"
+                                        />
+                                    </a>
+                                </h4>
+                            ) : (
+                                <h4>{cert.titulo}</h4>
+                            )}
+
+                            <p>{cert.descripcion}</p>
+                        </div>
+                    ))
+                }
+            </div>
+        </section>
+
+        <section id="trayectoria">
             <h2>Trayectoria y Formación</h2>
             <div class="timeline">
-                
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <span class="year">2025 - 2026</span>
                         <h4>Desarrollador RPA, Backend & GenAI</h4>
                         <span class="company">SURA AFP Capital (Kibernum)</span>
                         <p>
-                            Liderazgo técnico en la modernización de procesos corporativos críticos. Desarrollo de arquitecturas escalables y orquestación de datos bajo estrictos estándares de confidencialidad corporativa:
+                            Liderazgo técnico en la modernización de procesos
+                            corporativos críticos. Desarrollo de arquitecturas
+                            escalables y orquestación de datos bajo estrictos
+                            estándares de confidencialidad corporativa:
                         </p>
-                        <ul style="color: #a3a3a3; font-size: 0.95rem; line-height: 1.6; padding-left: 1.2rem; margin-top: 0.8rem;">
-                            <li style="margin-bottom: 0.5rem;"><strong>Arquitectura RaaS y Cloud:</strong> Diseño y despliegue de microservicios transaccionales (Robot as a Service) con Python y Playwright sobre infraestructura serverless en Google Cloud (GCP - Cloud Run).</li>
-                            <li style="margin-bottom: 0.5rem;"><strong>IA Generativa (GenAI):</strong> Integración de modelos cognitivos (OCR/NLP) y LLMs de última generación (Gemini 3 Flash) para el procesamiento inteligente de documentos (IDP) y extracción de datos no estructurados.</li>
-                            <li style="margin-bottom: 0.5rem;"><strong>Automatización Previsional:</strong> Desarrollo de soluciones RaaS para la gestión automatizada de nóminas y beneficios, interactuando con plataformas gubernamentales de alta concurrencia.</li>
-                            <li><strong>Orquestación de Datos:</strong> Diseño de flujos complejos (Appian, n8n) para sincronizar información desde plataformas de gestión legal directamente hacia SAP SuccessFactors.</li>
+                        <ul
+                            style="color: #a3a3a3; font-size: 0.95rem; line-height: 1.6; padding-left: 1.2rem; margin-top: 0.8rem;"
+                        >
+                            <li style="margin-bottom: 0.5rem;">
+                                <strong>Arquitectura RaaS y Cloud:</strong> Diseño
+                                y despliegue de microservicios transaccionales (Robot
+                                as a Service) con Python y Playwright sobre infraestructura
+                                serverless en Google Cloud (GCP - Cloud Run).
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <strong>IA Generativa (GenAI):</strong> Integración
+                                de modelos cognitivos (OCR/NLP) y LLMs de última generación
+                                (Gemini 3 Flash) para el procesamiento inteligente
+                                de documentos (IDP) y extracción de datos no estructurados.
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <strong>Automatización Previsional:</strong> Desarrollo
+                                de soluciones RaaS para la gestión automatizada de
+                                nóminas y beneficios, interactuando con plataformas
+                                gubernamentales de alta concurrencia.
+                            </li>
+                            <li>
+                                <strong>Orquestación de Datos:</strong> Diseño de
+                                flujos complejos (Appian, n8n) para sincronizar información
+                                desde plataformas de gestión legal directamente hacia
+                                SAP SuccessFactors.
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -382,23 +523,44 @@ const repositorios = [
                         <h4>Desarrollador TI RPA Senior</h4>
                         <span class="company">Claro Chile S.A.</span>
                         <p>
-                            Liderazgo técnico en el diseño e implementación de automatizaciones avanzadas. Supervisión de integraciones de sistemas complejos (APIs REST/SOAP) entre plataformas legacy y nuevas herramientas digitales. Coordinación técnica bajo estándares ITIL y metodologías ágiles, integrando motores cognitivos (OCR/NLP).
+                            Desarrollo y actualización de sistemas críticos
+                            mediante automatizaciones avanzadas. Supervisión de
+                            integraciones complejas (APIs REST/SOAP) entre
+                            plataformas legacy y nuevas herramientas digitales.
+                            Coordinación técnica bajo estándares ITIL y
+                            metodologías ágiles, integrando motores cognitivos
+                            (OCR/NLP) para la validación de datos.
                         </p>
                     </div>
                 </div>
 
-               <div class="timeline-item">
+                <div class="timeline-item">
                     <div class="timeline-content">
                         <span class="year">Jul 2024 - Nov 2024</span>
-                        <h4 style="display: flex; align-items: center; gap: 8px;">
-                            <a href="https://www.credential.net/f65c814b-6e87-4616-bebd-be26140cb679" target="_blank" style="color: inherit; text-decoration: none;" title="Ver credencial oficial">
+                        <h4
+                            style="display: flex; align-items: center; gap: 8px;"
+                        >
+                            <a
+                                href="https://www.credential.net/f65c814b-6e87-4616-bebd-be26140cb679"
+                                target="_blank"
+                                style="color: inherit; text-decoration: none;"
+                                title="Ver credencial oficial"
+                            >
                                 Ingeniero de Portafolios
-                                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; color: #BC52EE;"></i>
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square"
+                                    style="font-size: 0.8rem; color: #BC52EE;"
+                                ></i>
                             </a>
                         </h4>
                         <span class="company">Tecnológico de Monterrey</span>
                         <p>
-                            Certificación de competencias (85 horas). Especialización estratégica en <strong>Value Driven Delivery (VDD)</strong>, marcos ágiles y PMBOK. Enfoque en vincular la ejecución tecnológica y la automatización con los objetivos corporativos y el ROI del negocio.
+                            Certificación de competencias (85 horas).
+                            Especialización estratégica en <strong
+                                >Value Driven Delivery (VDD)</strong
+                            >, marcos ágiles y PMBOK. Enfoque en vincular la
+                            ejecución tecnológica y la automatización con los
+                            objetivos corporativos y el ROI del negocio.
                         </p>
                     </div>
                 </div>
@@ -409,7 +571,11 @@ const repositorios = [
                         <h4>Desarrollador TI RPA / Analista de Procesos</h4>
                         <span class="company">ECRGROUP® Chile</span>
                         <p>
-                            Gestión de requerimientos e integración de datos entre plataformas heterogéneas mediante APIs REST y scripts en Python. Optimización de la eficiencia administrativa implementando soluciones RPA con UiPath y Power Automate (Cloud y Desktop).
+                            Gestión de requerimientos e integración de datos
+                            entre plataformas heterogéneas mediante APIs REST y
+                            scripts en Python. Optimización de la eficiencia
+                            administrativa implementando soluciones RPA con
+                            UiPath y Power Automate (Cloud y Desktop).
                         </p>
                     </div>
                 </div>
@@ -420,9 +586,11 @@ const repositorios = [
                         <h4>Desarrollador TI RPA / Analista Funcional</h4>
                         <span class="company">Grupo STT Chile</span>
                         <p>
-                            Diseño y desarrollo de automatizaciones (UiPath / Power Automate).
-							Documentación técnica y funcional para transformación digital (Mapas AS-IS / TO-BE).
-							Implementación de inteligencia artificial (OCR y NLP) para procesar información no estructurada.
+                            Diseño y desarrollo de automatizaciones (UiPath /
+                            Power Automate). Documentación técnica y funcional
+                            para transformación digital (Mapas AS-IS / TO-BE).
+                            Implementación de inteligencia artificial (OCR y
+                            NLP) para procesar información no estructurada.
                         </p>
                     </div>
                 </div>
@@ -433,8 +601,9 @@ const repositorios = [
                         <h4>Ingeniería en Informática</h4>
                         <span class="company">IPCHILE</span>
                         <p>
-                            Titulación profesional con enfoque en desarrollo de software,
-							bases de datos y fundamentos sólidos de arquitectura de sistemas.
+                            Titulación profesional con enfoque en desarrollo de
+                            software, bases de datos y fundamentos sólidos de
+                            arquitectura de sistemas.
                         </p>
                     </div>
                 </div>
@@ -445,50 +614,60 @@ const repositorios = [
                         <h4>Consultor de Tecnología & Configurador RPA</h4>
                         <span class="company">EY (Ernst & Young)</span>
                         <p>
-                            Consultoría tecnológica y desarrollo de automatizaciones para instituciones financieras de primer nivel
-							 <strong>(Scotiabank, Banco Itaú y Banco Santander)</strong>. 
-							 Configuración y programación de robots utilizando <strong>Blue Prism</strong> y 
-							 <strong>UiPath</strong> para procesos bancarios críticos, garantizando el cumplimiento de SLAs, 
-							 la continuidad operativa y estrictos estándares de servicio y seguridad.
+                            Consultoría tecnológica y desarrollo de
+                            automatizaciones para instituciones financieras de
+                            primer nivel
+                            <strong
+                                >(Scotiabank, Banco Itaú y Banco Santander)</strong
+                            >. Configuración y programación de robots utilizando <strong
+                                >Blue Prism</strong
+                            > y
+                            <strong>UiPath</strong> para procesos bancarios críticos,
+                            garantizando el cumplimiento de SLAs, la continuidad operativa
+                            y estrictos estándares de servicio y seguridad.
                         </p>
                     </div>
                 </div>
-
             </div>
         </section>
 
-		<section id="github-repos">
-    <h2>Arquitecturas de Referencia (GitHub)</h2>
-    <p style="color: #a3a3a3; margin-bottom: 2rem; line-height: 1.6;">
-        Por estrictos acuerdos de confidencialidad (NDA) con el sector bancario y telco,
-        mi código de producción corporativo es privado. 
-        Estos repositorios públicos sirven como demostración técnica de mis estándares de arquitectura, 
-        POO y despliegue continuo.
-    </p>
-    
-    <div class="repo-grid">
-        {repositorios.map((repo) => (
-            <a href={repo.url} target="_blank" class="repo-card">
-                <div class="repo-header">
-                    <i class="fa-brands fa-github"></i>
-                    <h3>{repo.titulo}</h3>
-                </div>
-                <p set:html={repo.descripcion}></p>
-                <div class="tags">
-                    {repo.tags.map((tag) => (
-                        <span>{tag}</span>
-                    ))}
-                </div>
-            </a>
-        ))}
-    </div>
-</section>
+        <section id="github-repos">
+            <h2>Arquitecturas de Referencia (GitHub)</h2>
+            <p style="color: #a3a3a3; margin-bottom: 2rem; line-height: 1.6;">
+                Por estrictos acuerdos de confidencialidad (NDA) con el sector
+                bancario y telco, mi código de producción corporativo es
+                privado. Estos repositorios públicos sirven como demostración
+                técnica de mis estándares de arquitectura, POO y despliegue
+                continuo.
+            </p>
 
-		<section id="contacto" class="contact-section">
+            <div class="repo-grid">
+                {
+                    repositorios.map((repo) => (
+                        <a href={repo.url} target="_blank" class="repo-card">
+                            <div class="repo-header">
+                                <i class="fa-brands fa-github" />
+                                <h3>{repo.titulo}</h3>
+                            </div>
+                            <p set:html={repo.descripcion} />
+                            <div class="tags">
+                                {repo.tags.map((tag) => (
+                                    <span>{tag}</span>
+                                ))}
+                            </div>
+                        </a>
+                    ))
+                }
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-section">
             <div class="contact-content">
                 <h2>¿Listo para optimizar tus procesos?</h2>
                 <p>
-                    Actualmente estoy abierto a nuevos desafíos. Ya sea que busques modernizar la arquitectura de tu empresa o escalar operaciones con RPA, mi bandeja de entrada está abierta.
+                    Actualmente estoy abierto a nuevos desafíos. Ya sea que
+                    busques modernizar la arquitectura de tu empresa o escalar
+                    operaciones con RPA, mi bandeja de entrada está abierta.
                 </p>
                 <div class="cta-container">
                     <a
@@ -499,9 +678,9 @@ const repositorios = [
                     >
                         <i class="fa-brands fa-linkedin"></i> LinkedIn
                     </a>
-                    
-                    <a 
-                        href="https://wa.me/56942056649?text=Hola%20Cristian,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte." 
+
+                    <a
+                        href="https://wa.me/56942056649?text=Hola%20Cristian,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte."
                         target="_blank"
                         class="btn btn-whatsapp"
                         title="Escribir por WhatsApp"
@@ -509,17 +688,17 @@ const repositorios = [
                         <i class="fa-brands fa-whatsapp"></i> WhatsApp
                     </a>
 
-                    <a 
-                        href="mailto:cpalacios.borquez@gmail.com" 
+                    <a
+                        href="mailto:cpalacios.borquez@gmail.com"
                         class="btn btn-mail"
                         title="Enviar Email"
                     >
                         <i class="fa-solid fa-envelope"></i> Email
                     </a>
-                    
-                    <a 
-                        href="/cv_cpalacios.pdf" 
-                        download 
+
+                    <a
+                        href="/cv_cpalacios.pdf"
+                        download
                         class="btn btn-cv"
                         title="Descargar Currículum"
                     >
@@ -528,22 +707,22 @@ const repositorios = [
                 </div>
             </div>
         </section>
-	</main>
+    </main>
 </Layout>
 <style>
-	/* 1. Configuración de Contenedor Principal */
-	main {
-		margin: auto;
-		padding: 2rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: #ffffff;
-		line-height: 1.6;
-		font-family: "Inter", sans-serif;
-		overflow-x: hidden;
-	}
+    /* 1. Configuración de Contenedor Principal */
+    main {
+        margin: auto;
+        padding: 2rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: #ffffff;
+        line-height: 1.6;
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+    }
 
-	/* --- SECCIÓN HERO ACTUALIZADA CON FOTO --- */
+    /* --- SECCIÓN HERO ACTUALIZADA CON FOTO --- */
     .hero-section {
         display: flex;
         flex-wrap: wrap; /* Para móviles */
@@ -564,17 +743,25 @@ const repositorios = [
         height: 180px;
         border-radius: 50%; /* Foto redonda */
         object-fit: cover; /* Asegura que la foto no se deforme */
-        
+
         /* Diseño del anillo tecnológico */
-        background: padding-box, linear-gradient(45deg, #4f39fa, #da62c4) border-box;
+        background:
+            padding-box,
+            linear-gradient(45deg, #4f39fa, #da62c4) border-box;
         border: 4px solid transparent; /* Ancho del anillo */
-        
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(218, 98, 196, 0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.4),
+            0 0 15px rgba(218, 98, 196, 0.2);
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
     }
     .hero-profile-photo:hover {
         transform: scale(1.03);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(218, 98, 196, 0.3);
+        box-shadow:
+            0 15px 35px rgba(0, 0, 0, 0.5),
+            0 0 20px rgba(218, 98, 196, 0.3);
     }
 
     .hero-text-content {
@@ -626,25 +813,23 @@ const repositorios = [
         color: #d1d1d1;
     }
 
-    
+    /* 2. Tipografía y Títulos */
 
-	/* 2. Tipografía y Títulos */
+    section {
+        margin-top: 4rem;
+    }
+    strong {
+        color: #da62c4;
+    }
 
-	section {
-		margin-top: 4rem;
-	}
-	strong {
-		color: #da62c4;
-	}
+    /* 3. Limpieza Global de Enlaces */
+    a {
+        text-decoration: none !important;
+        outline: none;
+    }
 
-	/* 3. Limpieza Global de Enlaces */
-	a {
-		text-decoration: none !important;
-		outline: none;
-	}
-
-	/* 4. Estilos de iconos  */
-	.tech-ticker {
+    /* 4. Estilos de iconos  */
+    .tech-ticker {
         width: 100%;
         overflow: hidden;
         background: #1e1e1e;
@@ -652,7 +837,7 @@ const repositorios = [
         margin-top: 2rem;
         border-radius: 12px;
         border: 1px solid #333;
-		white-space: nowrap;
+        white-space: nowrap;
     }
 
     .ticker-content {
@@ -668,7 +853,7 @@ const repositorios = [
         margin: 0 2.5rem;
         flex-shrink: 0;
         height: 2.8rem; /* Altura uniforme para todos */
-        width: auto;    /* Que el ancho sea proporcional */
+        width: auto; /* Que el ancho sea proporcional */
         filter: grayscale(100%) brightness(0.7); /* Gris y un poco apagado */
         transition: all 0.4s ease;
     }
@@ -698,152 +883,155 @@ const repositorios = [
     }
 
     @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
     }
 
-	/* 5. Grids y Tarjetas Generales */
-	.expertise-grid {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
-	.project-grid,
-	.cert-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 1.5rem;
-		margin-top: 2rem;
-	}
-	.skill-item,
-	.project-card,
-	.cert-card {
-		background: #1e1e1e;
-		border: 1px solid #333;
-		border-radius: 12px;
-		padding: 1.5rem;
-		transition:
-			transform 0.2s ease,
-			border-color 0.2s ease;
-	}
-	.project-card:hover {
-		transform: scale(1.02);
-		border-color: #4f39fa;
-	}
+    /* 5. Grids y Tarjetas Generales */
+    .expertise-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .project-grid,
+    .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .skill-item,
+    .project-card,
+    .cert-card {
+        background: #1e1e1e;
+        border: 1px solid #333;
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition:
+            transform 0.2s ease,
+            border-color 0.2s ease;
+    }
+    .project-card:hover {
+        transform: scale(1.02);
+        border-color: #4f39fa;
+    }
 
-	/* 6. Certificaciones (Bordes Glow) */
-	.cert-card {
-		display: flex;
-		flex-direction: column;
-		transition:
-			transform 0.3s ease,
-			border-color 0.3s ease,
-			box-shadow 0.3s ease;
-	}
-	.cert-card:hover {
-		transform: translateY(-5px);
-	}
-	.cert-card.gold {
-		border: 1px solid #ffd700;
-		box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1);
-	}
-	.cert-card.gold span {
-		background: #ffd700;
-		color: #000;
-		font-weight: bold;
-	}
-	.cert-card.academy {
-		border: 1px solid #4f39fa;
-		box-shadow: 0 4px 15px rgba(79, 57, 250, 0.1);
-	}
-	.cert-card.academy span {
-		background: #4f39fa;
-		color: #fff;
-	}
-	.cert-card.tech {
-		border: 1px solid #da62c4;
-		box-shadow: 0 4px 15px rgba(218, 98, 196, 0.1);
-	}
-	.cert-card.tech span {
-		background: #da62c4;
-		color: #fff;
-	}
+    /* 6. Certificaciones (Bordes Glow) */
+    .cert-card {
+        display: flex;
+        flex-direction: column;
+        transition:
+            transform 0.3s ease,
+            border-color 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+    .cert-card:hover {
+        transform: translateY(-5px);
+    }
+    .cert-card.gold {
+        border: 1px solid #ffd700;
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1);
+    }
+    .cert-card.gold span {
+        background: #ffd700;
+        color: #000;
+        font-weight: bold;
+    }
+    .cert-card.academy {
+        border: 1px solid #4f39fa;
+        box-shadow: 0 4px 15px rgba(79, 57, 250, 0.1);
+    }
+    .cert-card.academy span {
+        background: #4f39fa;
+        color: #fff;
+    }
+    .cert-card.tech {
+        border: 1px solid #da62c4;
+        box-shadow: 0 4px 15px rgba(218, 98, 196, 0.1);
+    }
+    .cert-card.tech span {
+        background: #da62c4;
+        color: #fff;
+    }
 
-	.cert-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 1rem;
-	}
-	.cert-header i {
-		font-size: 1.8rem;
-	}
-	.cert-header img {
-		height: 1.8rem;
-		width: 1.8rem;
-	}
+    .cert-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .cert-header i {
+        font-size: 1.8rem;
+    }
+    .cert-header img {
+        height: 1.8rem;
+        width: 1.8rem;
+    }
 
-	.cert-header .local-icon-bp{
-		width: 8rem;
-	}
+    .cert-header .local-icon-bp {
+        width: 8rem;
+    }
 
-	.cert-header .local-icon-appian{
-		width: 5rem;
-	}
+    .cert-header .local-icon-appian {
+        width: 5rem;
+    }
 
-    
-	.cert-header span {
-		font-size: 0.65rem;
-		padding: 2px 8px;
-		border-radius: 4px;
-		text-transform: uppercase;
-	}
-	.cert-card .id {
-		font-size: 0.7rem;
-		color: #4ade80;
-		margin-top: auto;
-		padding-top: 1rem;
-		font-family: monospace;
-	}
+    .cert-header span {
+        font-size: 0.65rem;
+        padding: 2px 8px;
+        border-radius: 4px;
+        text-transform: uppercase;
+    }
+    .cert-card .id {
+        font-size: 0.7rem;
+        color: #4ade80;
+        margin-top: auto;
+        padding-top: 1rem;
+        font-family: monospace;
+    }
 
-	/* 7. Secciones Especiales */
-	.raas-container {
-		background: linear-gradient(135deg, #1e1e1e 0%, #252525 100%);
-		padding: 2rem;
-		border-radius: 16px;
-		border: 1px solid #4f39fa;
-		margin-bottom: 3rem;
-	}
-	.raas-badge {
-		background: #4f39fa;
-		color: white;
-		font-size: 0.7rem;
-		padding: 0.3rem 0.8rem;
-		border-radius: 20px;
-		display: inline-block;
-		margin-bottom: 1rem;
-		text-transform: uppercase;
-		font-weight: bold;
-	}
-	table {
-		width: 100%;
-		border-collapse: collapse;
-		margin-top: 1rem;
-		background: #1e1e1e;
-		border-radius: 8px;
-		overflow: hidden;
-	}
-	th,
-	td {
-		padding: 12px;
-		text-align: left;
-		border-bottom: 1px solid #333;
-	}
-	th {
-		background-color: #252525;
-		color: #da62c4;
-	}
-/* --- LÍNEA DE TIEMPO MODERNA --- */
+    /* 7. Secciones Especiales */
+    .raas-container {
+        background: linear-gradient(135deg, #1e1e1e 0%, #252525 100%);
+        padding: 2rem;
+        border-radius: 16px;
+        border: 1px solid #4f39fa;
+        margin-bottom: 3rem;
+    }
+    .raas-badge {
+        background: #4f39fa;
+        color: white;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+        background: #1e1e1e;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    th,
+    td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #333;
+    }
+    th {
+        background-color: #252525;
+        color: #da62c4;
+    }
+    /* --- LÍNEA DE TIEMPO MODERNA --- */
     .timeline {
         border-left: 2px solid #333; /* Línea principal más sutil */
         margin-left: 1rem;
@@ -851,12 +1039,12 @@ const repositorios = [
         position: relative;
         margin-top: 2rem;
     }
-    
+
     .timeline-item {
         position: relative;
         margin-bottom: 2.5rem;
     }
-    
+
     /* El "Nodo" o punto en la línea de tiempo */
     .timeline-item::before {
         content: "";
@@ -870,7 +1058,9 @@ const repositorios = [
         border: 3px solid #1e1e1e; /* Crea un efecto de anillo */
         box-shadow: 0 0 0 2px #4f39fa; /* Borde exterior morado */
         z-index: 1;
-        transition: background 0.3s ease, box-shadow 0.3s ease;
+        transition:
+            background 0.3s ease,
+            box-shadow 0.3s ease;
     }
 
     /* La Tarjeta de Contenido */
@@ -879,7 +1069,9 @@ const repositorios = [
         border: 1px solid #333;
         border-radius: 12px;
         padding: 1.5rem;
-        transition: transform 0.3s ease, border-color 0.3s ease;
+        transition:
+            transform 0.3s ease,
+            border-color 0.3s ease;
         position: relative;
     }
 
@@ -890,7 +1082,9 @@ const repositorios = [
     }
     .timeline-item:hover::before {
         background: #fff;
-        box-shadow: 0 0 12px #da62c4, 0 0 0 2px #da62c4;
+        box-shadow:
+            0 0 12px #da62c4,
+            0 0 0 2px #da62c4;
     }
 
     /* Tipografía interna de la línea de tiempo */
@@ -905,13 +1099,13 @@ const repositorios = [
         margin-bottom: 1rem;
         border: 1px solid rgba(79, 57, 250, 0.3);
     }
-    
+
     .timeline-content h4 {
         margin: 0 0 0.3rem 0;
         font-size: 1.3rem;
         color: #ffffff;
     }
-    
+
     .timeline-content .company {
         display: block;
         color: #da62c4;
@@ -921,7 +1115,7 @@ const repositorios = [
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
-    
+
     .timeline-content p {
         color: #a3a3a3;
         font-size: 0.95rem;
@@ -929,7 +1123,7 @@ const repositorios = [
         margin: 0;
     }
 
-	/* --- SECCIÓN DE CONTACTO (CTA) --- */
+    /* --- SECCIÓN DE CONTACTO (CTA) --- */
     .contact-section {
         margin-top: 6rem;
         margin-bottom: 2rem;
@@ -1020,11 +1214,11 @@ const repositorios = [
         box-shadow: 0 6px 20px rgba(218, 98, 196, 0.2);
         color: #da62c4;
     }
-	/* Botón WhatsApp */
+    /* Botón WhatsApp */
     .btn-whatsapp {
-        background: #25D366; /* Color oficial de WhatsApp */
+        background: #25d366; /* Color oficial de WhatsApp */
         color: white;
-        border: 1px solid #25D366;
+        border: 1px solid #25d366;
         box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
     }
     .btn-whatsapp:hover {
@@ -1033,18 +1227,18 @@ const repositorios = [
         box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
     }
 
-	@keyframes pulse {
-		0%,
-		100% {
-			opacity: 1;
-		}
-		50% {
-			opacity: 0.4;
-		}
-	}
+    @keyframes pulse {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.4;
+        }
+    }
 
-	/* Estilos para las etiquetas de tecnologías en las tarjetas de proyectos */
-	.tags {
+    /* Estilos para las etiquetas de tecnologías en las tarjetas de proyectos */
+    .tags {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
@@ -1059,7 +1253,7 @@ const repositorios = [
         border: 1px solid rgba(218, 98, 196, 0.3);
     }
 
-/* --- SECCIÓN REPOSITORIOS GITHUB --- */
+    /* --- SECCIÓN REPOSITORIOS GITHUB --- */
     .repo-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
@@ -1074,7 +1268,10 @@ const repositorios = [
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
-        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        transition:
+            transform 0.3s ease,
+            border-color 0.3s ease,
+            box-shadow 0.3s ease;
         text-decoration: none;
         color: inherit;
     }
@@ -1117,11 +1314,9 @@ const repositorios = [
         margin-top: auto;
     }
 
-	/* =========================================
+    /* =========================================
        PARCHE DE SEGURIDAD RESPONSIVA (MÓVILES)
        ========================================= */
-
-
 
     /* 1. Protección para la Tabla VDD */
     /* Evita que la tabla rompa el ancho de la pantalla en móviles, 
@@ -1141,17 +1336,17 @@ const repositorios = [
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     }
 
-	/* MEDIA QUERY PARA MÓVILES (Estilo columna centrada) */
+    /* MEDIA QUERY PARA MÓVILES (Estilo columna centrada) */
     @media (max-width: 768px) {
         .hero-section {
             flex-direction: column;
             gap: 1.5rem; /* Reducimos el gap general */
-            text-align: center; 
+            text-align: center;
         }
 
         .hero-text-content {
             flex: 1 1 auto; /* FIX: Quitamos los 400px para que no empuje hacia abajo */
-            align-items: center; 
+            align-items: center;
         }
 
         .hero-profile-photo {
@@ -1194,12 +1389,17 @@ const repositorios = [
 
     /* 4. Ajuste de Títulos para móviles */
     @media (max-width: 400px) {
-        h1 { font-size: 2.2rem !important; }
-        .role { font-size: 1.1rem !important; }
-        .contact-section { padding: 3rem 1.5rem; }
-        .btn { width: 100%; } /* Botones ocupan todo el ancho en móviles */
+        h1 {
+            font-size: 2.2rem !important;
+        }
+        .role {
+            font-size: 1.1rem !important;
+        }
+        .contact-section {
+            padding: 3rem 1.5rem;
+        }
+        .btn {
+            width: 100%;
+        } /* Botones ocupan todo el ancho en móviles */
     }
-
-
-	
 </style>
