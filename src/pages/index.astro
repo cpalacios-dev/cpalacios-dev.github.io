@@ -23,11 +23,28 @@ const techStack = [
         src: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/openai-light.svg",
         alt: "openai",
     },
+    {
+        type: "img",
+        src: "/icons/langchain.png",
+        alt: "LangChain",
+        css: "icon-extra-wide",
+    },
+    {
+        type: "img",
+        src: "/icons/langgraph.png",
+        alt: "LangGraph",
+        css: "icon-extra-wide",
+    },
     { type: "devicon", icon: "devicon-playwright-plain colored" },
     {
         type: "img",
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg",
         alt: "streamlit",
+    },
+    {
+        type: "img",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
+        alt: "fastapi",
     },
 
     // --- ECOSISTEMA RPA & LOW-CODE  ---
@@ -97,15 +114,15 @@ const certificaciones = [
 
     // --- BLOQUE 2: Código Puro, Datos & IA ---
     {
-        tipoTarjeta: "tech",
+        tipoTarjeta: "udemy-cert", 
         tipoIcono: "fa",
-        icono: "fa-solid fa-brain",
-        estiloIcono: "font-size: 1.8rem; color: #8E75B2;",
-        badge: "Especialización",
-        titulo: "Integración GenAI & LLMs",
+        icono: "fa-solid fa-robot",
+        estiloIcono: "font-size: 1.8rem; color: #4A90E2;",
+        badge: "Agentic AI", 
+        titulo: "Curso Completo de LangChain, LangGraph y Agentes de IA con Python",
         url: null,
         descripcion:
-            "Google Gemini API, Prompt Engineering y Automatización Cognitiva",
+            "Udemy | Desarrollo de Sistemas de IA Compuestos, Persistencia de Estados y Arquitecturas Multiagente Robustas",
     },
     {
         tipoTarjeta: "tech",
@@ -162,7 +179,7 @@ const certificaciones = [
 
 // Definimos los repositorios en un arreglo
 const repositorios = [
-    /*{
+    /* {
         titulo: "RaaS Automation: Previred",
         url: "https://github.com/cpalacios-dev/raas-previred-automation-core",
         descripcion:
@@ -176,6 +193,21 @@ const repositorios = [
             "Pydantic",
         ],
     },*/
+    {
+        titulo: "AegisFlow SOC (Multi-Agent System)",
+        url: "https://github.com/cpalacios-dev/aegisflow-soc",
+        descripcion:
+            "Arquitectura de orquestación multiagente para un Centro de Operaciones de Seguridad (SOC) utilizando <strong>LangGraph Supervisor</strong> y <strong>FastAPI</strong>. Automatiza secuencialmente el análisis técnico de IOCs con <strong>VirusTotal</strong>, la evaluación de severidad contextual con <strong>Tavily Search</strong>, y ejecuta mitigaciones integrando notificaciones HTML mediante la <strong>Gmail API</strong>. Incluye un dashboard en tiempo real interactivo desarrollado con <strong>Streamlit</strong>.",
+        tags: [
+            "LangGraph",
+            "langgraph-supervisor",
+            "FastAPI",
+            "Streamlit",
+            "VirusTotal API",
+            "Gmail API",
+            "Python",
+        ],
+    },
     {
         titulo: "IDP Smart Extractor (GenAI)",
         url: "https://github.com/cpalacios-dev/idp-smart-extractor-service",
@@ -258,11 +290,13 @@ const repositorios = [
                 >. Traduzco requerimientos operativos complejos en soluciones de
                 software de alto impacto bajo el modelo <strong
                     >Robot as a Service (RaaS)</strong
-                >. Mi enfoque va más allá de la automatización tradicional:
-                diseño <strong>arquitecturas escalables (Docker, GCP)</strong>,
-                desarrollo motores de <strong>Web Scraping avanzado</strong> e integro
-                <strong>IA Generativa (Gemini/LLMs)</strong> para orquestar flujos
-                de trabajo autónomos que elevan la eficiencia y el retorno de inversión
+                >. Mi enfoque evoluciona la automatización tradicional hacia la
+                ingeniería de software cognitivo: diseño <strong
+                    >arquitecturas serverless y escalables (Docker, GCP)</strong
+                >, desarrollo motores avanzados de Web Scraping y construyo <strong
+                    >Sistemas de IA Compuestos (LangChain, LangGraph)</strong
+                >, orquestando arquitecturas multiagente autónomas con
+                persistencia de estados que maximizan la eficiencia y el ROI
                 corporativo.
             </div>
 
@@ -293,29 +327,33 @@ const repositorios = [
             <div class="expertise-grid">
                 <div class="skill-item">
                     <i class="devicon-googlecloud-plain colored"></i>
-                    <span
-                        ><strong>Cloud, Arquitectura & UI:</strong> GCP (Cloud Run,
-                        Secret Manager), Docker, Microservicios (RaaS). Integración
+                    <span>
+                        <strong>Cloud, Arquitectura & UI:</strong> Despliegue serverless
+                        en GCP (Cloud Run, Secret Manager), contenedores con Docker
+                        y microservicios bajo el modelo RaaS. Integración avanzada
                         de APIs (REST/SOAP) y desarrollo de interfaces interactivas
-                        con Streamlit.</span
-                    >
+                        para herramientas de datos utilizando Streamlit.
+                    </span>
                 </div>
                 <div class="skill-item">
                     <i class="devicon-python-plain colored"></i>
-                    <span
-                        ><strong>Automatización, IA & Scraping:</strong> Python, Playwright,
-                        BeautifulSoup, Pandas. Integración de IA Generativa (Google
-                        Gemini, OpenAI). Frameworks RPA empresariales (Appian, UiPath,
-                        Power Automate, n8n).</span
-                    >
+                    <span>
+                        <strong>Agentic AI, Automatización & Scraping:</strong> Ingeniería
+                        de prompts y desarrollo de sistemas multiagente avanzados
+                        (LangChain, LangGraph). Automatización web con Python, Playwright,
+                        BeautifulSoup y Pandas. Frameworks RPA empresariales (Appian,
+                        UiPath, Power Automate, n8n).
+                    </span>
                 </div>
                 <div class="skill-item">
                     <i class="devicon-jira-plain colored"></i>
-                    <span
-                        ><strong>Gestión, DevOps & Agilidad:</strong> CI/CD, Git (GitHub/GitLab),
-                        Testing (Mocking), Ciclo de vida del software (SDLC), Scrum
-                        y PMBOK.</span
-                    >
+                    <span>
+                        <strong>Gestión, DevOps & Agilidad VDD:</strong> Control de
+                        versiones y CI/CD (GitHub/GitLab), metodologías de testing
+                        (Mocking) y ciclo de vida de software (SDLC). Priorización
+                        estratégica de backlogs orientada al valor del negocio utilizando
+                        marcos Scrum y PMBOK.
+                    </span>
                 </div>
             </div>
         </section>
@@ -994,6 +1032,45 @@ const repositorios = [
         font-family: monospace;
     }
 
+    /* Tarjeta Espacial para Udemy (Agentic AI) */
+    .cert-card.udemy-cert {
+        border: 1px solid #b866ff;
+        box-shadow: 0 4px 20px rgba(164, 53, 240, 0.15);
+        background: linear-gradient(145deg, #1e1e1e 0%, #151026 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Efecto hover mejorado para denotar que es "especial" */
+    .cert-card.udemy-cert:hover {
+        border-color: #d199ff;
+        box-shadow: 0 6px 25px rgba(164, 53, 240, 0.35);
+    }
+
+    /* Badge de la tarjeta con degradado púrpura/magenta */
+    .cert-card.udemy-cert span {
+        background: linear-gradient(90deg, #a435f0 0%, #da62c4 100%);
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        box-shadow: 0 2px 8px rgba(164, 53, 240, 0.4);
+    }
+
+    /* Sutil destello de fondo para dar profundidad de "IA/Agentes" */
+    .cert-card.udemy-cert::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle,
+            rgba(164, 53, 240, 0.08) 0%,
+            transparent 70%
+        );
+        pointer-events: none;
+    }
     /* 7. Secciones Especiales */
     .raas-container {
         background: linear-gradient(135deg, #1e1e1e 0%, #252525 100%);
