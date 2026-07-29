@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 # Ignorar credenciales de certificados JSON
 public/icons/credential-*.json
+*copia.pdf

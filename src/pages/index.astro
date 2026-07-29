@@ -48,6 +48,12 @@ const techStack = [
     },
 
     // --- ECOSISTEMA RPA & LOW-CODE  ---
+    {
+        type: "img",
+        src: "https://cdn.brandfetch.io/idZH6OyfmQ/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1771204616518",
+        alt: "Automation Anywhere (AA360)",
+        css: "icon-wide",
+    },
     { type: "img", src: "/icons/uipath.svg", alt: "UiPath" },
     {
         type: "img",
@@ -75,6 +81,16 @@ const techStack = [
     },
 
     // --- GESTIÓN Y DATOS  ---
+    {
+        type: "img",
+        src: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/sap/default.svg",
+        alt: "SAP R/3",
+    },
+    {
+        type: "img",
+        src: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/microsoft-power-bi/default.svg",
+        alt: "Power BI",
+    },
     { type: "devicon", icon: "devicon-jira-plain colored" },
     { type: "devicon", icon: "devicon-azuresqldatabase-plain colored" },
     { type: "devicon", icon: "devicon-postgresql-plain colored" },
@@ -114,11 +130,11 @@ const certificaciones = [
 
     // --- BLOQUE 2: Código Puro, Datos & IA ---
     {
-        tipoTarjeta: "udemy-cert", 
+        tipoTarjeta: "udemy-cert",
         tipoIcono: "fa",
         icono: "fa-solid fa-robot",
         estiloIcono: "font-size: 1.8rem; color: #4A90E2;",
-        badge: "Agentic AI", 
+        badge: "Agentic AI",
         titulo: "Curso Completo de LangChain, LangGraph y Agentes de IA con Python",
         url: null,
         descripcion:
@@ -194,6 +210,21 @@ const repositorios = [
         ],
     },*/
     {
+        titulo: "Pipeline de Indicadores Financieros (BCCh)",
+        url: "https://github.com/cpalacios-dev/Challenge_ing_rpa_scraping",
+        descripcion:
+            "Pipeline de automatización y scraping headless resiliente con <strong>Playwright</strong> para la extracción diaria de indicadores financieros (UF, Dólar, Euro, UTM) del Banco Central de Chile. Diseñado bajo principios de Clean Code con validación de datos en <strong>Pydantic</strong>, persistencia intercambiable (JSON/SQLite), pipeline CI/CD en <strong>GitHub Actions</strong> y propuesta de arquitectura serverless en <strong>GCP Cloud Run Jobs</strong>.",
+        tags: [
+            "Python",
+            "Playwright",
+            "Pydantic",
+            "GCP Cloud Run",
+            "GitHub Actions",
+            "SQLite",
+            "CI/CD",
+        ],
+    },
+    {
         titulo: "AegisFlow SOC (Multi-Agent System)",
         url: "https://github.com/cpalacios-dev/aegisflow-soc",
         descripcion:
@@ -258,7 +289,7 @@ const repositorios = [
                     GenAI
                 </p>
                 <div class="status-badge">
-                    <span class="dot"></span> Disponible para nuevos desafíos
+                    <span class="dot"></span> Liderando Automatización E2E & RaaS
                 </div>
                 <div class="social-links">
                     <a
@@ -288,10 +319,21 @@ const repositorios = [
                 ejecución técnica avanzada con la visión estratégica de la <strong
                     >Gestión de Portafolios (VDD)</strong
                 >. Traduzco requerimientos operativos complejos en soluciones de
-                software de alto impacto bajo el modelo <strong
+                software de alto impacto y arquitectura <strong
                     >Robot as a Service (RaaS)</strong
-                >. Mi enfoque evoluciona la automatización tradicional hacia la
-                ingeniería de software cognitivo: diseño <strong
+                >.
+                <br /><br />
+                Actualmente lidero de forma integral (End-to-End) la estrategia de
+                automatización corporativa en <strong>ACT S.A.</strong>,
+                diseñando e implementando soluciones críticas (Proyecto
+                Cenabast) con <strong
+                    >Automation Anywhere (AA360), Python, GCP, GitHub y
+                    analítica en Power BI</strong
+                > sobre entornos <strong>SAP R/3, SQL y sistemas Legacy</strong
+                >.
+                <br /><br />
+                Mi enfoque evoluciona la automatización tradicional hacia la ingeniería
+                de software cognitivo: diseño <strong
                     >arquitecturas serverless y escalables (Docker, GCP)</strong
                 >, desarrollo motores avanzados de Web Scraping y construyo <strong
                     >Sistemas de IA Compuestos (LangChain, LangGraph)</strong
@@ -332,7 +374,8 @@ const repositorios = [
                         en GCP (Cloud Run, Secret Manager), contenedores con Docker
                         y microservicios bajo el modelo RaaS. Integración avanzada
                         de APIs (REST/SOAP) y desarrollo de interfaces interactivas
-                        para herramientas de datos utilizando Streamlit.
+                        para herramientas de datos utilizando Streamlit y dashboards
+                        ejecutivos en Power BI.
                     </span>
                 </div>
                 <div class="skill-item">
@@ -341,8 +384,9 @@ const repositorios = [
                         <strong>Agentic AI, Automatización & Scraping:</strong> Ingeniería
                         de prompts y desarrollo de sistemas multiagente avanzados
                         (LangChain, LangGraph). Automatización web con Python, Playwright,
-                        BeautifulSoup y Pandas. Frameworks RPA empresariales (Appian,
-                        UiPath, Power Automate, n8n).
+                        BeautifulSoup y Pandas. Plataformas RPA enterprise (Automation
+                        Anywhere AA360, UiPath, Blue Prism, Power Automate, Appian,
+                        n8n).
                     </span>
                 </div>
                 <div class="skill-item">
@@ -361,18 +405,20 @@ const repositorios = [
         <section id="raas-architecture">
             <div class="raas-container">
                 <div class="raas-badge">Core Expertise</div>
-                <h2>Arquitectura RaaS (Robot as a Service)</h2>
+                <h2>Arquitectura RaaS & Integración Enterprise</h2>
                 <p>
-                    Diseño microservicios transaccionales bajo el modelo <strong
-                        >RaaS</strong
-                    >, utilizando
-                    <strong>Python</strong>, <strong>Playwright</strong> y la API
-                    de <strong>Google Gemini</strong>. Estas soluciones
-                    autónomas se integran fluidamente con bases de datos y
+                    Diseño e implemento microservicios transaccionales bajo el
+                    modelo <strong>RaaS</strong>
+                    y automatizaciones enterprise (AA360/SAP R/3), utilizando
+                    <strong>Python</strong>, <strong>Playwright</strong> y <strong
+                        >LLMs (Gemini, OpenAI)</strong
+                    >. Estas soluciones autónomas se integran fluidamente con
+                    ecosistemas ERP, bases de datos (SQL Server, PostgreSQL) y
                     Google Workspace, siendo desplegadas sobre infraestructura
                     serverless en <strong
                         >Google Cloud Platform (Cloud Run)</strong
-                    > para garantizar alta disponibilidad y escalabilidad masiva.
+                    > para garantizar alta disponibilidad, observabilidad y escalabilidad
+                    masiva.
                 </p>
             </div>
         </section>
@@ -382,13 +428,36 @@ const repositorios = [
             <div class="project-grid">
                 <article class="project-card">
                     <header>
+                        <span class="company">ACT S.A. (CENABAST)</span>
+                        <h3>Automatización Enterprise E2E & SAP R/3</h3>
+                    </header>
+                    <p>
+                        Liderazgo integral en el diseño, desarrollo y despliegue
+                        de soluciones de automatización crítica con <strong
+                            >Automation Anywhere (AA360)</strong
+                        >
+                        y <strong>Python</strong> sobre entornos <strong
+                            >SAP R/3 y Legacy</strong
+                        >. Generación de dashboards estratégicos en <strong
+                            >Power BI</strong
+                        > e integración de CI/CD con GitHub.
+                    </p>
+                    <div class="tags">
+                        <span>AA360</span><span>SAP R/3</span><span>Python</span
+                        ><span>Power BI</span><span>SQL</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <header>
                         <span class="company">SURA AFP CAPITAL</span>
                         <h3>Modelo Robot as a Service (RaaS)</h3>
                     </header>
                     <p>
                         Desarrollo de microservicios transaccionales en <strong
                             >Cloud Run</strong
-                        > e integración de <strong>IA (OCR/NLP)</strong> para la gestión
+                        >
+                        e integración de <strong>IA (OCR/NLP)</strong> para la gestión
                         automatizada de nóminas críticas, reduciendo drásticamente
                         la carga operativa manual.
                     </p>
@@ -513,6 +582,48 @@ const repositorios = [
         <section id="trayectoria">
             <h2>Trayectoria y Formación</h2>
             <div class="timeline">
+                <!-- HITO ACTUAL -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="year">2026 - Presente</span>
+                        <h4>
+                            Líder de Automatización E2E & Desarrollador
+                            RPA/Python
+                        </h4>
+                        <span class="company">ACT S.A.</span>
+                        <p>
+                            Liderazgo integral en el diseño, desarrollo e
+                            implementación de soluciones de automatización
+                            corporativa de alto impacto:
+                        </p>
+                        <ul
+                            style="color: #a3a3a3; font-size: 0.95rem; line-height: 1.6; padding-left: 1.2rem; margin-top: 0.8rem;"
+                        >
+                            <li style="margin-bottom: 0.5rem;">
+                                <strong>Proyecto Cenabast & SAP R/3:</strong> Construcción
+                                de bots críticos en <strong
+                                    >Automation Anywhere (AA360)</strong
+                                > y <strong>Python</strong>
+                                para la gestión masiva de operaciones en entornos
+                                SAP R/3 y sistemas Legacy.
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <strong>Arquitectura & CI/CD:</strong> Orquestación
+                                de infraestructura serverless en <strong
+                                    >GCP</strong
+                                >, integración de repositorios y pipelines CI/CD
+                                con <strong>GitHub</strong> bajo estándares DevOps.
+                            </li>
+                            <li>
+                                <strong>Business Intelligence:</strong> Diseño de
+                                tableros de control y analítica operativa en <strong
+                                    >Power BI</strong
+                                > para la medición de SLAs y ROI.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <span class="year">2025 - 2026</span>
@@ -536,8 +647,8 @@ const repositorios = [
                             <li style="margin-bottom: 0.5rem;">
                                 <strong>IA Generativa (GenAI):</strong> Integración
                                 de modelos cognitivos (OCR/NLP) y LLMs de última generación
-                                (Gemini 3 Flash) para el procesamiento inteligente
-                                de documentos (IDP) y extracción de datos no estructurados.
+                                (Gemini) para el procesamiento inteligente de documentos
+                                (IDP) y extracción de datos no estructurados.
                             </li>
                             <li style="margin-bottom: 0.5rem;">
                                 <strong>Automatización Previsional:</strong> Desarrollo
@@ -659,8 +770,8 @@ const repositorios = [
                                 >(Scotiabank, Banco Itaú y Banco Santander)</strong
                             >. Configuración y programación de robots utilizando <strong
                                 >Blue Prism</strong
-                            > y
-                            <strong>UiPath</strong> para procesos bancarios críticos,
+                            >
+                            y <strong>UiPath</strong> para procesos bancarios críticos,
                             garantizando el cumplimiento de SLAs, la continuidad operativa
                             y estrictos estándares de servicio y seguridad.
                         </p>
